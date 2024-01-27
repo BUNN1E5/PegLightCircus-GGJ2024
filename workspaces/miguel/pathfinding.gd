@@ -7,7 +7,6 @@ const CIRCLE_SIZE = 10
 # https://www.youtube.com/watch?v=EOocBMBbL-E
 @onready var agent: NavigationAgent3D = $NavigationAgent3D
 @onready var entrancePoint: Marker3D = get_node("/root/MiguelWorkspace/Targets/Entrance")
-var target: Vector3
 var identifier = 0
 
 
@@ -17,11 +16,11 @@ func _ready():
 func actor_setup():
 	await get_tree().physics_frame
 	# set at spawn point
-	self.global_position = entrancePoint.position
+	#self.global_position = entrancePoint.position <-THIS WAS your problem
 	# static points don't work for multiple units.
-	agent.set_target_position(Vector3(-3.654545, 0, 7.622066))
+	#agent.set_target_position(Vector3(-3.654545, 0, 7.622066))
 	# randomized locations work for more than 1 unit.
-	# pickNewLocation()
+	pickNewLocation(Vector3(-3.654545, 0, 7.622066))
 
 
 func _physics_process(delta):
@@ -38,9 +37,10 @@ func moveToLocation(delta):
 	
 	move_and_slide()
 
-func pickNewLocation():
-	target = random_inside_unit_circle()
-	target = target * CIRCLE_SIZE
+func pickNewLocation(target):
+	if target == null:
+		target = random_inside_unit_circle()
+		target = target * CIRCLE_SIZE # <- This was the verdict
 	print(target)
 	agent.set_target_position(target)
 

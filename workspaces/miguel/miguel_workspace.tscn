@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://butk12o0b5xs0"]
+[gd_scene load_steps=6 format=3 uid="uid://butk12o0b5xs0"]
 
 [ext_resource type="PackedScene" uid="uid://b406py2vmwi0v" path="res://workspaces/miguel/character.tscn" id="1_iuusa"]
 
@@ -14,6 +14,8 @@ height = 0.1
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_lbe3c"]
 height = 0.1
 radius = 10.0
+
+[sub_resource type="Environment" id="Environment_os1jt"]
 
 [node name="MiguelWorkspace" type="Node3D"]
 
@@ -31,11 +33,15 @@ skeleton = NodePath("../..")
 transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("CylinderShape3D_lbe3c")
 
-[node name="PrimaryCharacter" parent="NavigationRegion3D" instance=ExtResource("1_iuusa")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.706322, -5.1906)
+[node name="PrimaryCharacter2" parent="NavigationRegion3D" instance=ExtResource("1_iuusa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.608397, 1.41264, -2.03089)
+
+[node name="PrimaryCharacter3" parent="NavigationRegion3D" instance=ExtResource("1_iuusa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.21679, 2.82529, -4.06178)
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.99999, -0.00442161, -0.001232, 0.00442328, 0.856607, 0.515951, -0.00122599, -0.515951, 0.856617, -0.558326, 6.65591, 13.6532)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 15, 0)
+environment = SubResource("Environment_os1jt")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.78116, 0)
