@@ -34,10 +34,12 @@ transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, 0, 0, 0
 shape = SubResource("CylinderShape3D_lbe3c")
 
 [node name="PrimaryCharacter2" parent="NavigationRegion3D" instance=ExtResource("1_iuusa")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.608397, 1.41264, -2.03089)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.5, 2.08165e-12, 2.08165e-12)
+metadata/CharacterNum = 0
 
 [node name="PrimaryCharacter3" parent="NavigationRegion3D" instance=ExtResource("1_iuusa")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.21679, 2.82529, -4.06178)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 2.08165e-12, 2.08165e-12)
+metadata/CharacterNum = 1
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 15, 0)
@@ -53,7 +55,7 @@ omni_range = 15.3333
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 2.08165e-12, 2.08165e-12)
 
 [node name="BeginA" type="Marker3D" parent="Targets"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.311644, 1.65276, 7.9393)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 2.08165e-12, 5)
 
 [node name="BeginB" type="Marker3D" parent="Targets"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.35945, 4.56604, -0.76082)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 2.08165e-12, -5)
