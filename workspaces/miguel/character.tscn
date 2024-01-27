@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://b406py2vmwi0v"]
+
+[ext_resource type="Script" path="res://workspaces/miguel/pathfinding.gd" id="1_rilcv"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_uslw2"]
+radius = 0.25
+height = 1.0
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_cof1b"]
+radius = 0.2
+height = 1.0
+
+[node name="PrimaryCharacter" type="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.706322, -2.77854)
+script = ExtResource("1_rilcv")
+metadata/state = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_uslw2")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_cof1b")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+debug_enabled = true
+
+[connection signal="navigation_finished" from="NavigationAgent3D" to="." method="_on_navigation_agent_3d_navigation_finished"]
