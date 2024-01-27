@@ -11,5 +11,6 @@ config_version=5
 [application]
 
 config/name="GGJ 2024"
+run/main_scene="res://scenes/Main.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
