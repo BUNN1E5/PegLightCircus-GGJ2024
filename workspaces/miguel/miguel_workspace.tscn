@@ -35,10 +35,16 @@ shape = SubResource("CylinderShape3D_lbe3c")
 
 [node name="PrimaryCharacter2" parent="NavigationRegion3D" instance=ExtResource("1_iuusa")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.5, 2.08165e-12, 2.08165e-12)
+primaryPerformancePointPath = NodePath("../../Targets/BeginA")
+secondaryPerformancePointPath = NodePath("../../Targets/BeginB")
+entrancePointPath = NodePath("../../Targets/Entrance")
 metadata/CharacterNum = 0
 
 [node name="PrimaryCharacter3" parent="NavigationRegion3D" instance=ExtResource("1_iuusa")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 2.08165e-12, 2.08165e-12)
+primaryPerformancePointPath = NodePath("../../Targets/BeginA")
+secondaryPerformancePointPath = NodePath("../../Targets/BeginB")
+entrancePointPath = NodePath("../../Targets/Entrance")
 metadata/CharacterNum = 1
 
 [node name="Camera3D" type="Camera3D" parent="."]

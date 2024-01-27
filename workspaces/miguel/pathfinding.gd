@@ -16,10 +16,14 @@ const HEXAGON_SPEED = 2
 const HEXAGON_MOVEMENT_DIAMETER = 4
 const PERFORMANCE_MODES = ["wander", "static", "hexagon"]
 
+@export var primaryPerformancePointPath: NodePath = ""
+@export var secondaryPerformancePointPath: NodePath = ""
+@export var entrancePointPath: NodePath = ""
+
 @onready var agent: NavigationAgent3D = $NavigationAgent3D
-@onready var entrancePoint: Marker3D = get_node("/root/MiguelWorkspace/Targets/Entrance")
-@onready var performancePointA: Marker3D = get_node("/root/MiguelWorkspace/Targets/BeginA")
-@onready var performancePointB: Marker3D = get_node("/root/MiguelWorkspace/Targets/BeginB")
+@onready var entrancePoint: Marker3D = get_node(entrancePointPath)
+@onready var performancePointA: Marker3D = get_node(primaryPerformancePointPath)
+@onready var performancePointB: Marker3D = get_node(secondaryPerformancePointPath)
 
 var unit_speed = BASE_UNIT_SPEED
 var identifier = 0
