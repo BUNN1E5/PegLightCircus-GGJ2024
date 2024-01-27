@@ -1,6 +1,9 @@
-[gd_scene format=3 uid="uid://q3nlgpva1vnx"]
+[gd_scene load_steps=2 format=3 uid="uid://q3nlgpva1vnx"]
+
+[ext_resource type="CameraAttributesPhysical" uid="uid://c27pks55vtiyw" path="res://globals/camera_attributes.tres" id="1_frbp1"]
 
 [node name="Node3D" type="Node3D"]
 
 [node name="MainCamera" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.894654, 0.44676, 0, -0.44676, 0.894654, 0, 0.538495, 0.826162)
+attributes = ExtResource("1_frbp1")

@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://y306fk1hhkax"
-path="res://.godot/imported/Circus Blockout.blend-b57b241b8b16bb8f0170776e30e46d25.scn"
+path="res://.godot/imported/circus_blockout.blend-5a95c28787ce04efd64eb10d3eac34e0.scn"
 
 [deps]
 
-source_file="res://models/Circus Blockout.blend"
-dest_files=["res://.godot/imported/Circus Blockout.blend-b57b241b8b16bb8f0170776e30e46d25.scn"]
+source_file="res://models/circus_blockout.blend"
+dest_files=["res://.godot/imported/circus_blockout.blend-5a95c28787ce04efd64eb10d3eac34e0.scn"]
 
 [params]
 

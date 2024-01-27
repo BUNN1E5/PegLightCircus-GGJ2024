@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://mog0pwhcjaxo"
-path="res://.godot/imported/PegsonBase.blend-499f39b7c0786da684641da354a1c1bd.scn"
+path="res://.godot/imported/pegson_base.blend-49f8bb5c3c342749015d75197778f11b.scn"
 
 [deps]
 
-source_file="res://models/PegsonBase.blend"
-dest_files=["res://.godot/imported/PegsonBase.blend-499f39b7c0786da684641da354a1c1bd.scn"]
+source_file="res://models/pegson_base.blend"
+dest_files=["res://.godot/imported/pegson_base.blend-49f8bb5c3c342749015d75197778f11b.scn"]
 
 [params]
 
