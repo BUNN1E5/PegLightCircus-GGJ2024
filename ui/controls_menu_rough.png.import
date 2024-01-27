@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c8f00dh1j00lp"
-path="res://.godot/imported/ringmaster.png-9232725f349903183628bc8b2db75582.ctex"
+uid="uid://d0pyitwyvbf60"
+path="res://.godot/imported/controls_menu_rough.png-050bac0aef1ed5aab746af966b66d15c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://models/ringmaster.png"
-dest_files=["res://.godot/imported/ringmaster.png-9232725f349903183628bc8b2db75582.ctex"]
+source_file="res://ui/controls_menu_rough.png"
+dest_files=["res://.godot/imported/controls_menu_rough.png-050bac0aef1ed5aab746af966b66d15c.ctex"]
 
 [params]
 

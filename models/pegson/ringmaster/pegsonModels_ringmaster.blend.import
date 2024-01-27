@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://mog0pwhcjaxo"
-path="res://.godot/imported/pegson_base.blend-49f8bb5c3c342749015d75197778f11b.scn"
+uid="uid://bj5ihigkbj2ox"
+path="res://.godot/imported/pegsonModels_ringmaster.blend-c3dc2687b8552dcc25a3afda303c6ac8.scn"
 
 [deps]
 
-source_file="res://models/pegson_base.blend"
-dest_files=["res://.godot/imported/pegson_base.blend-49f8bb5c3c342749015d75197778f11b.scn"]
+source_file="res://models/pegson/ringmaster/pegsonModels_ringmaster.blend"
+dest_files=["res://.godot/imported/pegsonModels_ringmaster.blend-c3dc2687b8552dcc25a3afda303c6ac8.scn"]
 
 [params]
 
