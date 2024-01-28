@@ -1,0 +1,64 @@
+[gd_scene load_steps=4 format=3 uid="uid://cxunels6ylmo6"]
+
+[ext_resource type="FontFile" uid="uid://cunxvknnjnyow" path="res://ui/font/Headlinetext.ttf" id="1_rjop7"]
+[ext_resource type="FontFile" uid="uid://d35ywjw0hbydi" path="res://ui/font/sitka-small-599.ttf" id="2_5a1gb"]
+
+[sub_resource type="SystemFont" id="SystemFont_7iup5"]
+
+[node name="Ending" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 14.0
+offset_right = 1.0
+offset_bottom = 14.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -3.0
+offset_top = 282.0
+offset_right = -428.0
+offset_bottom = -268.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.421751
+theme_override_fonts/font = ExtResource("1_rjop7")
+theme_override_font_sizes/font_size = 68
+text = "PEGSONVILLE NEWS"
+
+[node name="Line2D" type="Line2D" parent="."]
+position = Vector2(-254, -6)
+rotation = -0.00230373
+scale = Vector2(1.36714, 1.32703)
+points = PackedVector2Array(132, 339, 907, -27)
+width = 2.0
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 171.0
+offset_top = 298.0
+offset_right = 673.0
+offset_bottom = 321.0
+rotation = -0.434198
+theme_override_fonts/font = SubResource("SystemFont_7iup5")
+text = "A totally real newspaper you can pickup at your local liquor store"
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 430.0
+offset_top = 261.0
+offset_right = 1244.0
+offset_bottom = 870.0
+rotation = -0.440811
+theme_override_fonts/font = ExtResource("2_5a1gb")
+theme_override_font_sizes/font_size = 30
+text = "Visiting local circus royally bombs their first visit to Pegsonville. What a travesty. Local citizen, Beverly Woodicka, looking to sue, suffered from external splintering of the utmost degree. \"I just wanted to have fun.\" she says on her deathbed. Officials say this stems from the horrific acts rooted from this deathly circus. Peg Light Circus, more like leave. While you still can. It's not on us. Authoritrees are still for the perpratrators as they picked up and left.
+
+Up next in other news, new recipe for keeping your wood waxed and free of waterlogging your pores. As I have always said, Betty Rocker swears on butter. One could have never guessed these strange remedies for our wooden complexions. More on the way."
+autowrap_mode = 2
