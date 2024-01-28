@@ -1,7 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://boc46c77fcwh3"]
+[gd_scene load_steps=7 format=3 uid="uid://dq84h37cj0avl"]
 
 [ext_resource type="Script" path="res://ui/main_menu.gd" id="1_hdxst"]
-[ext_resource type="FontFile" uid="uid://c78bw8xs221pf" path="res://ui/font/SpanishCircus.otf" id="1_natb1"]
+[ext_resource type="FontFile" uid="uid://csxgko4334q6k" path="res://ui/font/SpanishCircus.otf" id="1_natb1"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pvat4"]
 
@@ -61,29 +61,48 @@ text = "Circus"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Start Button" type="Button" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -461.0
-offset_top = -223.0
-offset_right = -73.0
-offset_bottom = -101.0
+offset_left = -382.0
+offset_top = -236.0
+offset_right = -84.0
+offset_bottom = -68.0
 grow_horizontal = 0
 grow_vertical = 0
+theme_override_constants/separation = 16
+
+[node name="Start Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
 theme_override_colors/font_color = Color(0.956863, 0.494118, 0.4, 1)
 theme_override_colors/font_pressed_color = Color(0.7, 0.343, 0.28, 1)
 theme_override_colors/font_hover_color = Color(0.8, 0.392, 0.32, 1)
 theme_override_colors/font_focus_color = Color(0.933333, 0.458824, 0.376471, 1)
 theme_override_fonts/font = ExtResource("1_natb1")
-theme_override_font_sizes/font_size = 108
+theme_override_font_sizes/font_size = 84
 theme_override_styles/normal = SubResource("StyleBoxEmpty_pvat4")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_dxs2b")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_xk70v")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_cpwu6")
 text = "START"
 
-[connection signal="pressed" from="Start Button" to="." method="_on_start_button_pressed"]
+[node name="Controls Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.956863, 0.494118, 0.4, 1)
+theme_override_colors/font_pressed_color = Color(0.7, 0.343, 0.28, 1)
+theme_override_colors/font_hover_color = Color(0.8, 0.392, 0.32, 1)
+theme_override_colors/font_focus_color = Color(0.933333, 0.458824, 0.376471, 1)
+theme_override_fonts/font = ExtResource("1_natb1")
+theme_override_font_sizes/font_size = 52
+theme_override_styles/normal = SubResource("StyleBoxEmpty_pvat4")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_dxs2b")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_xk70v")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_cpwu6")
+text = "Controls"
+
+[connection signal="pressed" from="VBoxContainer/Start Button" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Controls Button" to="." method="_on_controls_button_pressed"]

@@ -12,4 +12,8 @@ func _process(delta):
 
 
 func _on_start_button_pressed():
-	print("IMPLEMENT ON START BUTTON PRESSED")
+	print("IMPLEMENT START BUTTON PRESSED")
+
+
+func _on_controls_button_pressed():
+	print("IMPLEMENT CONTROLS BUTTON PRESSED")
