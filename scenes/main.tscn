@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://q3nlgpva1vnx"]
 
-[ext_resource type="CameraAttributesPhysical" uid="uid://darree7b7758v" path="res://globals/camera_attributes.tres" id="1_frbp1"]
+[ext_resource type="CameraAttributesPractical" uid="uid://c6pgxfqyx0nwq" path="res://globals/camera_attributes.tres" id="1_frbp1"]
 [ext_resource type="PackedScene" uid="uid://dp54hsgyrv12m" path="res://models/environment/circus_Enviorment.blend" id="2_l350w"]
 
 [node name="Node3D" type="Node3D"]

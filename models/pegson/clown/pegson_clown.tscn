@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://cd3nc5gd6wn4a"]
+[gd_scene load_steps=7 format=3 uid="uid://cd3nc5gd6wn4a"]
 
 [ext_resource type="PackedScene" uid="uid://donqcw0oo7765" path="res://models/pegson/clown/pegson_clown.blend" id="1_ph2un"]
 [ext_resource type="Texture2D" uid="uid://b6gi34fhd2ir8" path="res://models/pegson/clown/pegson_clown_texture.png" id="2_4g34b"]
+[ext_resource type="Script" path="res://scripts/pegson_entity.gd" id="2_dqji8"]
 [ext_resource type="AnimationLibrary" uid="uid://02tta3w4mg3m" path="res://models/pegson/pegson_base_animations.res" id="3_5mnls"]
 [ext_resource type="Texture2D" uid="uid://c8qf8yoidvngd" path="res://models/pegson/clown/pegson_clown_normals.png" id="3_oex8w"]
 
@@ -14,10 +15,15 @@ normal_texture = ExtResource("3_oex8w")
 [node name="pegson_clown" instance=ExtResource("1_ph2un")]
 
 [node name="body" parent="." index="0"]
-transform = Transform3D(0.104455, 0.00283486, 0.00582539, -0.00281337, 0.104617, -0.000464144, -0.0058358, 0.000306655, 0.104493, 0, 0.123468, 0)
+transform = Transform3D(0.104201, 0.00310433, 0.00923943, -0.00309187, 0.10461, -0.000278053, -0.00924366, 3.88233e-06, 0.104247, 0, 0.123468, 0)
 material_override = SubResource("StandardMaterial3D_2gabi")
 
 [node name="AnimationPlayer" parent="." index="1"]
 libraries = {
 "": ExtResource("3_5mnls")
 }
+autoplay = "Idle"
+
+[node name="PegsonEntity" type="Node" parent="." index="2" node_paths=PackedStringArray("anim_node")]
+script = ExtResource("2_dqji8")
+anim_node = NodePath("../AnimationPlayer")

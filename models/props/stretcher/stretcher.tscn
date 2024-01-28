@@ -1,35 +1,48 @@
-[gd_scene load_steps=6 format=3 uid="uid://fsst3b4tlx"]
+[gd_scene load_steps=7 format=3 uid="uid://fsst3b4tlx"]
 
 [ext_resource type="PackedScene" uid="uid://drkns2vn7y3l7" path="res://models/props/stretcher/stretcher_isolated.blend" id="1_b1s0c"]
 [ext_resource type="Texture2D" uid="uid://bayc21ad2mnqu" path="res://models/props/stretcher/stretcher_isolated_texture.png" id="2_14r6f"]
+[ext_resource type="Script" path="res://scripts/stretcher.gd" id="2_dv3ft"]
 [ext_resource type="PackedScene" uid="uid://xhdovmhderpl" path="res://models/pegson/pegson_base.tscn" id="3_yvrpr"]
 [ext_resource type="AnimationLibrary" uid="uid://02tta3w4mg3m" path="res://models/pegson/pegson_base_animations.res" id="4_d4jyp"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ntrou"]
+cull_mode = 2
 albedo_texture = ExtResource("2_14r6f")
 
-[node name="stretcher_isolated" instance=ExtResource("1_b1s0c")]
+[node name="stretcher" instance=ExtResource("1_b1s0c")]
 
 [node name="body" parent="." index="0"]
-transform = Transform3D(0.358738, -0.289646, 0.0631108, 0.109552, 0.956713, -0.00180054, -0.0318235, 0.0283629, 0.705233, 0, 0.0335748, 0)
+transform = Transform3D(0.995654, 0.0296624, 0.0882841, -0.0295432, 0.99956, -0.00265683, -0.0883241, 3.70962e-05, 0.996092, 0, 0.123468, 0)
 material_override = SubResource("StandardMaterial3D_ntrou")
 
 [node name="pegson_base2" parent="." index="1" instance=ExtResource("3_yvrpr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
 
 [node name="body" parent="pegson_base2" index="0"]
-transform = Transform3D(0.101168, -0.0251235, 0.00931452, 0.025247, 0.101565, -0.00026996, -0.00897457, 0.00250796, 0.104241, 0, 0.105933, 0)
+transform = Transform3D(0.104201, 0.00310434, 0.00923955, -0.00309186, 0.10461, -0.000278056, -0.00924363, 3.88234e-06, 0.104248, 0, 0.123468, 0)
+
+[node name="AnimationPlayer" parent="pegson_base2" index="1"]
+autoplay = "pegson_base_animations/walk"
 
 [node name="pegson_base" parent="." index="2" instance=ExtResource("3_yvrpr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
 
 [node name="body" parent="pegson_base" index="0"]
-transform = Transform3D(0.101489, -0.0237949, 0.00931098, 0.0239132, 0.101887, -0.000270817, -0.00900305, 0.0023901, 0.104241, 0, 0.111055, 0)
+transform = Transform3D(0.104201, 0.00310434, 0.00923951, -0.00309187, 0.10461, -0.000278055, -0.00924366, 3.88234e-06, 0.104248, 0, 0.123468, 0)
+
+[node name="AnimationPlayer" parent="pegson_base" index="1"]
+autoplay = "pegson_base_animations/walk"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="3"]
 libraries = {
 "pegson_base_animations": ExtResource("4_d4jyp")
 }
+autoplay = "pegson_base_animations/walk"
+
+[node name="StretcherController" type="Node" parent="." index="4"]
+script = ExtResource("2_dv3ft")
+stretcher_node_path = NodePath("../body")
 
 [editable path="pegson_base2"]
 [editable path="pegson_base"]

@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dffgstpy1kogc" path="res://models/environment/seat_barrier_pedastal_col.png" id="2_vy5oe"]
 [ext_resource type="Texture2D" uid="uid://cuapdcv17f7nh" path="res://models/environment/seat_barrier_pesastal_normals.png" id="3_ocqnx"]
 [ext_resource type="Environment" uid="uid://dk5cqk6373bwl" path="res://globals/default_enviroment.tres" id="4_705bk"]
-[ext_resource type="CameraAttributesPhysical" uid="uid://c27pks55vtiyw" path="res://globals/camera_attributes.tres" id="5_8c57g"]
+[ext_resource type="CameraAttributesPractical" uid="uid://c6pgxfqyx0nwq" path="res://globals/camera_attributes.tres" id="5_8c57g"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ho24d"]
 albedo_texture = ExtResource("2_vy5oe")
@@ -39,8 +39,10 @@ material_override = SubResource("StandardMaterial3D_ho24d")
 shape = SubResource("CylinderShape3D_jtwa2")
 
 [node name="Camera_playerview" parent="." index="6"]
+visible = false
 environment = ExtResource("4_705bk")
 attributes = ExtResource("5_8c57g")
+size = 14.478
 
 [node name="barrier" parent="." index="7"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00148559, 0.0136459, -0.00690079)
