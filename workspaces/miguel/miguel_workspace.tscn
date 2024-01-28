@@ -49,6 +49,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00186586, 2.38419e-07, 0.00
 shape = SubResource("BoxShape3D_sltso")
 
 [node name="center" type="MeshInstance3D" parent="NavigationRegion3D"]
+visible = false
 mesh = SubResource("CylinderMesh_bi6vu")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/center"]
@@ -69,24 +70,25 @@ shape = SubResource("CylinderShape3D_lbe3c")
 
 [node name="PrimaryCharacter2" parent="NavigationRegion3D" instance=ExtResource("1_iuusa")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.095, 1, 15.5)
-primaryPerformancePointPath = NodePath("../../Targets/BeginA")
-secondaryPerformancePointPath = NodePath("../../Targets/BeginB")
+performancePointPath = NodePath("../../Targets/PerformancePointA")
 entrancePointPath = NodePath("../../Targets/Entrance")
+performanceType = "wander"
 metadata/CharacterNum = 0
 
 [node name="PrimaryCharacter3" parent="NavigationRegion3D" instance=ExtResource("1_iuusa")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 1, 15)
-primaryPerformancePointPath = NodePath("../../Targets/BeginA")
-secondaryPerformancePointPath = NodePath("../../Targets/BeginB")
+performancePointPath = NodePath("../../Targets/PerformancePointB")
 entrancePointPath = NodePath("../../Targets/Entrance")
+performanceType = "hexagon"
 metadata/CharacterNum = 1
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 20.7651, 0)
+transform = Transform3D(-1, 2.99004e-08, -8.21505e-08, -1.0692e-08, 0.890808, 0.454379, 8.67665e-08, 0.454379, -0.890808, 0.0114865, 6.32708, -11.2234)
 environment = SubResource("Environment_os1jt")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.78116, 0)
+visible = false
 omni_range = 15.3333
 
 [node name="Targets" type="Node" parent="."]
@@ -94,10 +96,11 @@ omni_range = 15.3333
 [node name="Entrance" type="Marker3D" parent="Targets"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 2.08165e-12, 16)
 
-[node name="BeginA" type="Marker3D" parent="Targets"]
+[node name="PerformancePointA" type="Marker3D" parent="Targets"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 2.08165e-12, 2.08165e-12)
 
-[node name="BeginB" type="Marker3D" parent="Targets"]
+[node name="PerformancePointB" type="Marker3D" parent="Targets"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 2.08165e-12, 2.08165e-12)
 
 [node name="circus_blockout" parent="." instance=ExtResource("2_tnk2d")]
+transform = Transform3D(1, 0.000770879, 0.000233432, -0.00077075, 1, -0.000553746, -0.000233858, 0.000553566, 1, 0, 0, 0)

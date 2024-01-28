@@ -4,10 +4,10 @@
 [ext_resource type="FontFile" uid="uid://w2tsh7trb72s" path="res://ui/fonts/Headlinetext.ttf" id="1_qe0lp"]
 [ext_resource type="FontFile" uid="uid://bybflb60413wb" path="res://ui/fonts/Cardo-Regular.ttf" id="2_vh43d"]
 [ext_resource type="Texture2D" uid="uid://c66qclilfeexh" path="res://ui/bad_ending_image_1.png" id="3_26vvf"]
-[ext_resource type="FontFile" uid="uid://cie8saegu6jpb" path="res://ui/fonts/Cardo-Bold.ttf" id="4_p7x1f"]
-[ext_resource type="Texture2D" uid="uid://bw4l6xdx5ncw6" path="res://ui/good_ending_image.png" id="5_610xy"]
+[ext_resource type="FontFile" uid="uid://1nlr3n27hs2r" path="res://ui/fonts/Cardo-Bold.ttf" id="4_p7x1f"]
+[ext_resource type="Texture2D" uid="uid://b28fa6tbrvxsp" path="res://ui/good_ending_image.png" id="5_610xy"]
 [ext_resource type="Texture2D" uid="uid://fiqliec7addr" path="res://ui/bad_ending_image_1_color.png" id="5_ksx2q"]
-[ext_resource type="Texture2D" uid="uid://2qwc7uj1b4yf" path="res://ui/good_ending_image_1_color.png" id="7_ecmst"]
+[ext_resource type="Texture2D" uid="uid://cplxdt8w2flkw" path="res://ui/good_ending_image_1_color.png" id="7_ecmst"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lj6q2"]
 bg_color = Color(0.717647, 0.717647, 0.717647, 1)

@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://b406py2vmwi0v"]
+[gd_scene load_steps=5 format=3 uid="uid://b406py2vmwi0v"]
 
 [ext_resource type="Script" path="res://workspaces/miguel/pathfinding.gd" id="1_rilcv"]
+[ext_resource type="PackedScene" uid="uid://xhdovmhderpl" path="res://models/pegson/pegson_base.tscn" id="2_xw74c"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_uslw2"]
 radius = 0.25
@@ -11,14 +12,19 @@ radius = 0.2
 height = 1.0
 
 [node name="PrimaryCharacter" type="CharacterBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.706322, -2.77854)
 script = ExtResource("1_rilcv")
 metadata/state = 0
 
+[node name="pegson_base" parent="." instance=ExtResource("2_xw74c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 2.08165e-12, 2.08165e-12)
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 0.4, 2.08165e-12)
 shape = SubResource("CapsuleShape3D_uslw2")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 0.4, 2.08165e-12)
+visible = false
 mesh = SubResource("CapsuleMesh_cof1b")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]

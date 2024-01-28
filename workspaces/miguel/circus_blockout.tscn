@@ -309,7 +309,7 @@ skeleton = NodePath("")
 
 [node name="Spotlight1" type="SpotLight3D" parent="."]
 transform = Transform3D(0.0826849, -0.996575, -0.00125561, 0.819753, 0.0672975, 0.56875, -0.566717, -0.0480563, 0.82251, 0, 9.99875, 14.1913)
-light_color = Color(1, 1, 1, 1)
+visible = false
 light_energy = 163054.0
 spot_range = 4096.0
 spot_angle = 5.75
@@ -317,7 +317,7 @@ spot_angle_attenuation = 0.254004
 
 [node name="Spotlight2" type="SpotLight3D" parent="."]
 transform = Transform3D(1.73488, 1.30399, -0.0953094, 1.0605, -1.31081, 1.36983, 0.764737, -1.14047, -1.68339, -0.526731, 10.6409, -13.8786)
-light_color = Color(1, 1, 1, 1)
+visible = false
 light_energy = 163054.0
 spot_range = 4096.0
 spot_angle = 5.75
