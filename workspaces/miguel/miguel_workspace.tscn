@@ -1,10 +1,26 @@
-[gd_scene load_steps=6 format=3 uid="uid://butk12o0b5xs0"]
+[gd_scene load_steps=11 format=3 uid="uid://butk12o0b5xs0"]
 
 [ext_resource type="PackedScene" uid="uid://b406py2vmwi0v" path="res://workspaces/miguel/character.tscn" id="1_iuusa"]
+[ext_resource type="PackedScene" uid="uid://1upxf1855tlr" path="res://workspaces/miguel/circus_blockout.tscn" id="2_tnk2d"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_5rq7j"]
-vertices = PackedVector3Array(-0.75, 0.45, -3.25, 0, 0.45, -3.5, 0, 0.45, -9.5, -3, 0.45, -9.25, -6.25, 0.45, -7.5, -8.5, 0.45, -4.75, -9.5, 0.45, -2, -0.75, 0.45, -2.25, -0.75, 0.45, -3.25, -3, 0.45, -9.25, -9.5, 0.45, -2, -9.5, 0.45, 2, -7.5, 0.45, 6.25, 0, 0.45, 9.5, 0, 0.45, -2, -0.75, 0.45, -2.25, -7.5, 0.45, 6.25, -3.75, 0.45, 9, 0, 0.45, 9.5, 0, 0.45, -9.5, 0, 0.45, -3.5, 0.75, 0.45, -3.25, 3, 0.45, -9.25, 9.5, 0.45, -2, 8.5, 0.45, -4.75, 6.25, 0.45, -7.5, 3, 0.45, -9.25, 0.75, 0.45, -3.25, 0.75, 0.45, -2.25, 7.5, 0.45, 6.25, 9.5, 0.45, 2, 9.5, 0.45, -2, 0.75, 0.45, -2.25, 0, 0.45, -2, 0, 0.45, 9.5, 0, 0.45, 9.5, 3.75, 0.45, 9, 7.5, 0.45, 6.25)
-polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 3), PackedInt32Array(5, 4, 6), PackedInt32Array(6, 4, 9), PackedInt32Array(6, 9, 8), PackedInt32Array(6, 8, 7), PackedInt32Array(11, 10, 12), PackedInt32Array(12, 10, 15), PackedInt32Array(12, 15, 14), PackedInt32Array(12, 14, 13), PackedInt32Array(18, 17, 16), PackedInt32Array(20, 19, 21), PackedInt32Array(21, 19, 22), PackedInt32Array(24, 23, 25), PackedInt32Array(25, 23, 26), PackedInt32Array(26, 23, 27), PackedInt32Array(27, 23, 28), PackedInt32Array(30, 29, 31), PackedInt32Array(31, 29, 32), PackedInt32Array(32, 29, 33), PackedInt32Array(33, 29, 34), PackedInt32Array(37, 36, 35)]
+vertices = PackedVector3Array(-2, 0.5, -9.5, -4.75, 0.5, -8.5, -7.5, 0.5, -6.25, -9.25, 0.5, -3, -3, 0.5, -1.5, -1.5, 0.5, -3, -9.5, 0.5, 1.25, -3, 0.5, 1.25, -3, 0.5, -1.5, -9.25, 0.5, -3, -1.5, 0.5, -3, 1.5, 0.5, -3, 2, 0.5, -9.5, -2, 0.5, -9.5, 3, 0.5, -1.5, 3, 0.5, 1.25, 9.5, 0.5, 1.25, 9, 0.5, -3.75, 3, 0.5, -1.5, 9, 0.5, -3.75, 6.25, 0.5, -7.5, 2.25, 0.5, -2.5, 1.5, 0.5, -3, 2.25, 0.5, -2.5, 6.25, 0.5, -7.5, 2, 0.5, -9.5, 2, 3.5, 1, 1, 3.5, -2, -2, 3.5, -1, -2, 3.5, 1, -1, 3.5, 2, 1, 3.5, 2, 1, 3.5, -2, -1, 3.5, -2, -2, 3.5, -1, 2, 3.5, 1, 2, 3.5, -1, 1, 3.5, -2, 1.75, 0.5, 0.75, 0.75, 0.5, -1.75, -1.75, 0.5, -0.75, -1.75, 0.5, 0.75, -0.75, 0.5, 1.75, 0.75, 0.5, 1.75, 0.75, 0.5, -1.75, -0.75, 0.5, -1.75, -1.75, 0.5, -0.75, 1.75, 0.5, 0.75, 1.75, 0.5, -0.75, 0.75, 0.5, -1.75, -9.5, 0.5, 1.25, -9, 0.5, 3.75, -7.5, 0.5, 6.25, -4.75, 0.5, 8.5, -1.5, 0.5, 3, -3, 0.5, 1.25, 1, 0.5, 9.75, 3.75, 0.5, 9, 6.25, 0.5, 7.5, 8.5, 0.5, 4.75, 9.5, 0.5, 1.25, 3, 0.5, 1.25, 1.5, 0.5, 3, 6.25, 0.5, 7.5, -1, 0.5, 9.75, -1, 0.5, 16, 1, 0.5, 16, 1, 0.5, 9.75, 1, 0.5, 9.75, 6.25, 0.5, 7.5, 1.5, 0.5, 3, -1.5, 0.5, 3, -4.75, 0.5, 8.5, -1, 0.5, 9.75)
+polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 5), PackedInt32Array(2, 5, 4), PackedInt32Array(2, 4, 3), PackedInt32Array(7, 6, 8), PackedInt32Array(8, 6, 9), PackedInt32Array(10, 13, 11), PackedInt32Array(11, 13, 12), PackedInt32Array(15, 14, 16), PackedInt32Array(16, 14, 17), PackedInt32Array(21, 20, 18), PackedInt32Array(18, 20, 19), PackedInt32Array(23, 22, 24), PackedInt32Array(24, 22, 25), PackedInt32Array(31, 30, 26), PackedInt32Array(26, 30, 29), PackedInt32Array(26, 29, 28), PackedInt32Array(26, 28, 27), PackedInt32Array(34, 33, 32), PackedInt32Array(37, 36, 35), PackedInt32Array(43, 42, 38), PackedInt32Array(38, 42, 41), PackedInt32Array(38, 41, 40), PackedInt32Array(38, 40, 39), PackedInt32Array(46, 45, 44), PackedInt32Array(49, 48, 47), PackedInt32Array(51, 50, 52), PackedInt32Array(52, 50, 53), PackedInt32Array(53, 50, 55), PackedInt32Array(53, 55, 54), PackedInt32Array(56, 58, 57), PackedInt32Array(59, 63, 60), PackedInt32Array(60, 63, 61), PackedInt32Array(61, 63, 62), PackedInt32Array(67, 66, 64), PackedInt32Array(64, 66, 65), PackedInt32Array(73, 72, 68), PackedInt32Array(68, 72, 71), PackedInt32Array(68, 71, 70), PackedInt32Array(68, 70, 69)]
+
+[sub_resource type="BoxMesh" id="BoxMesh_xveoc"]
+size = Vector3(3, 0.1, 7)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sltso"]
+size = Vector3(3, 0.1, 7)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_bi6vu"]
+top_radius = 2.5
+bottom_radius = 2.5
+height = 6.0
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_ocxxo"]
+height = 6.0
+radius = 2.5
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_a3esg"]
 top_radius = 10.0
@@ -22,6 +38,24 @@ radius = 10.0
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 navigation_mesh = SubResource("NavigationMesh_5rq7j")
 
+[node name="floor" type="MeshInstance3D" parent="NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 2.08165e-12, 13)
+mesh = SubResource("BoxMesh_xveoc")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/floor"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/floor/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00186586, 2.38419e-07, 0.00622845)
+shape = SubResource("BoxShape3D_sltso")
+
+[node name="center" type="MeshInstance3D" parent="NavigationRegion3D"]
+mesh = SubResource("CylinderMesh_bi6vu")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D/center"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/center/StaticBody3D"]
+shape = SubResource("CylinderShape3D_ocxxo")
+
 [node name="wall" type="MeshInstance3D" parent="NavigationRegion3D"]
 transform = Transform3D(1, -3.48787e-16, 3.48787e-16, 3.48787e-16, 1, -3.48787e-16, -3.48787e-16, 3.48787e-16, 1, 0, 0, 0)
 mesh = SubResource("CylinderMesh_a3esg")
@@ -34,21 +68,21 @@ transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, 0, 0, 0
 shape = SubResource("CylinderShape3D_lbe3c")
 
 [node name="PrimaryCharacter2" parent="NavigationRegion3D" instance=ExtResource("1_iuusa")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.5, 2.08165e-12, 2.08165e-12)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.095, 1, 15.5)
 primaryPerformancePointPath = NodePath("../../Targets/BeginA")
 secondaryPerformancePointPath = NodePath("../../Targets/BeginB")
 entrancePointPath = NodePath("../../Targets/Entrance")
 metadata/CharacterNum = 0
 
 [node name="PrimaryCharacter3" parent="NavigationRegion3D" instance=ExtResource("1_iuusa")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 2.08165e-12, 2.08165e-12)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 1, 15)
 primaryPerformancePointPath = NodePath("../../Targets/BeginA")
 secondaryPerformancePointPath = NodePath("../../Targets/BeginB")
 entrancePointPath = NodePath("../../Targets/Entrance")
 metadata/CharacterNum = 1
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 15, 0)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 20.7651, 0)
 environment = SubResource("Environment_os1jt")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
@@ -58,10 +92,12 @@ omni_range = 15.3333
 [node name="Targets" type="Node" parent="."]
 
 [node name="Entrance" type="Marker3D" parent="Targets"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 2.08165e-12, 2.08165e-12)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 2.08165e-12, 16)
 
 [node name="BeginA" type="Marker3D" parent="Targets"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 2.08165e-12, 5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 2.08165e-12, 2.08165e-12)
 
 [node name="BeginB" type="Marker3D" parent="Targets"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 2.08165e-12, -5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 2.08165e-12, 2.08165e-12)
+
+[node name="circus_blockout" parent="." instance=ExtResource("2_tnk2d")]
