@@ -1,6 +1,8 @@
 [gd_resource type="StyleBoxFlat" format=3 uid="uid://dek8lefyto840"]
 
 [resource]
-border_width_top = 4
-border_width_right = 4
-border_width_bottom = 4
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
