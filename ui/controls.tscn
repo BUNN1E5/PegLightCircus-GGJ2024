@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://cmws2ypm1r58f"]
+[gd_scene load_steps=8 format=3 uid="uid://cmws2ypm1r58f"]
 
+[ext_resource type="Script" path="res://ui/controls.gd" id="1_5opxo"]
 [ext_resource type="Theme" uid="uid://bwkh88618xc5e" path="res://ui/text_theme.tres" id="1_bcfts"]
 [ext_resource type="StyleBox" uid="uid://dek8lefyto840" path="res://ui/white_box.tres" id="2_37fa8"]
 
@@ -13,6 +14,13 @@ border_color = Color(0, 0, 0, 1)
 
 [sub_resource type="Theme" id="Theme_m36ly"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0dwh5"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_color = Color(0.8, 0.8, 0.8, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sqopf"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
 [node name="Controls" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -20,6 +28,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_5opxo")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 2
@@ -36,6 +45,7 @@ size_flags_vertical = 3
 layout_mode = 2
 theme = ExtResource("1_bcfts")
 theme_override_colors/font_color = Color(0, 0.0666667, 0.607843, 1)
+theme_override_font_sizes/font_size = 72
 text = "Controls
 "
 horizontal_alignment = 1
@@ -44,7 +54,7 @@ horizontal_alignment = 1
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="200" type="Label" parent="VBoxContainer"]
+[node name="Label2" type="Label" parent="VBoxContainer"]
 custom_minimum_size = Vector2(200, 2.08165e-12)
 layout_mode = 2
 theme = ExtResource("1_bcfts")
@@ -63,7 +73,7 @@ autowrap_mode = 2
 
 [node name="HSeparator2" type="HSeparator" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_constants/separation = 218
+theme_override_constants/separation = 240
 
 [node name="Label3" type="Label" parent="VBoxContainer"]
 layout_mode = 2
@@ -332,3 +342,17 @@ layout_mode = 2
 theme = ExtResource("1_bcfts")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "SHIFT"
+
+[node name="MenuButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 12.0
+offset_right = 146.0
+offset_bottom = 65.0
+theme = ExtResource("1_bcfts")
+theme_override_font_sizes/font_size = 42
+theme_override_styles/normal = SubResource("StyleBoxFlat_0dwh5")
+theme_override_styles/focus = SubResource("StyleBoxFlat_sqopf")
+text = "BACK"
+
+[connection signal="pressed" from="MenuButton" to="." method="_on_menu_button_pressed"]
