@@ -1,10 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://dlopfs386db8w"]
+[gd_scene load_steps=9 format=3 uid="uid://dlopfs386db8w"]
 
 [ext_resource type="PackedScene" uid="uid://dp54hsgyrv12m" path="res://models/environment/circus_Enviorment.blend" id="1_n7682"]
 [ext_resource type="Texture2D" uid="uid://dffgstpy1kogc" path="res://models/environment/seat_barrier_pedastal_col.png" id="2_vy5oe"]
 [ext_resource type="Texture2D" uid="uid://cuapdcv17f7nh" path="res://models/environment/seat_barrier_pesastal_normals.png" id="3_ocqnx"]
-[ext_resource type="Environment" uid="uid://dk5cqk6373bwl" path="res://globals/default_enviroment.tres" id="4_705bk"]
-[ext_resource type="CameraAttributesPractical" uid="uid://c6pgxfqyx0nwq" path="res://globals/camera_attributes.tres" id="5_8c57g"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ho24d"]
 albedo_texture = ExtResource("2_vy5oe")
@@ -12,7 +10,7 @@ normal_enabled = true
 normal_scale = 16.0
 normal_texture = ExtResource("3_ocqnx")
 
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_jtwa2"]
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_akymw"]
 height = 0.001
 radius = 5.0
 
@@ -39,15 +37,11 @@ normal_texture = ExtResource("3_ocqnx")
 [node name="pedastal" parent="." index="1"]
 material_override = SubResource("StandardMaterial3D_ho24d")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="ground" index="0"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="ground/StaticBody3D" index="0"]
-shape = SubResource("CylinderShape3D_jtwa2")
+[node name="CollisionShape3D" parent="ground/StaticBody3D" index="0"]
+shape = SubResource("CylinderShape3D_akymw")
 
 [node name="Camera_playerview" parent="." index="5"]
-visible = false
-environment = ExtResource("4_705bk")
-attributes = ExtResource("5_8c57g")
+transform = Transform3D(-0.90595, 0.33989, -0.252446, -1.13398e-05, 0.596238, 0.802808, 0.423385, 0.727306, -0.540158, -15.365, 49.7636, -32.6297)
 size = 14.478
 
 [node name="barrier_004" parent="." index="6"]

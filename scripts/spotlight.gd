@@ -1,4 +1,4 @@
-extends Node3D
+extends SpotLight3D
 
 @export var camera_node_path : NodePath
 @onready var camera_node : Camera3D = get_node(camera_node_path)
@@ -14,6 +14,8 @@ extends Node3D
 @export var speed : float
 @export var smooth_value : float
 
+@export var spotlight_on : bool = true
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	light_collider.connect("body_entered", _on_enter_spotlight)
@@ -25,20 +27,34 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	self._move_light(_controller_input())
+	self._move_light(_controller_stick())
 	pass
 
 func _move_light(move : Vector2):
-	var z_relative = camera_node.transform.basis.x * move.x + camera_node.transform.basis.z * move.y
+	var z_relative = camera_node.transform.basis * Vector3(move.x, -move.y, 0)
+	z_relative.y = 0
 	marker.position += z_relative
 	self.look_at(marker.position)
 	pass
+	
+func _set_light(enabled : bool):
+	spotlight_on = enabled
+	light_collider.set_process(enabled)
+	self.set_process(enabled)
+	if enabled:
+		AudienceManager.add_target(marker)
+	else:
+		AudienceManager.remove_target(marker)
+	
 
-func _controller_input(): # Do we wanna make the curse a x^2 curve it's normalized to 1 anyways and will make joystick easier
+func _controller_stick(): # Do we wanna make the curse a x^2 curve it's normalized to 1 anyways and will make joystick easier
 	var input = Input.get_vector(input_name_prefix + "_left", input_name_prefix + "_right", input_name_prefix + "_up", input_name_prefix + "_down")
 	return input * speed
 
 func _input(event):
+	if event.is_action_pressed(input_name_prefix + "_toggle"):
+		_set_light(!spotlight_on)
+	
 	if event is InputEventMouseMotion:
 		if not use_mouse:
 			return

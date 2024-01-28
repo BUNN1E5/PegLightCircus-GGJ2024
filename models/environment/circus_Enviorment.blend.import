@@ -29,7 +29,56 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 import_script/path=""
-_subresources={}
+_subresources={
+"nodes": {
+"PATH:barrier_001": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:barrier_002": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:barrier_003": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:barrier_004": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:ground": {
+"generate/physics": true
+},
+"PATH:pedastal": {
+"generate/physics": true
+},
+"PATH:seats_001": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:seats_002": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:seats_003": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:seats_004": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:tent_top": {
+"generate/physics": true,
+"physics/shape_type": 2
+},
+"PATH:tent_walls": {
+"generate/physics": true,
+"physics/shape_type": 2
+}
+}
+}
 gltf/naming_version=1
 gltf/embedded_image_handling=1
 blender/nodes/visible=0

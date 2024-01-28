@@ -1,15 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://c6it73womfku8"]
+[gd_scene load_steps=4 format=3 uid="uid://c6it73womfku8"]
 
 [ext_resource type="Script" path="res://scripts/spotlight.gd" id="1_34gbe"]
+[ext_resource type="PackedScene" uid="uid://bpi5hcphjxmfa" path="res://models/props/spotlight/spotlight.blend" id="2_8j7jl"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_k1vsl"]
 
 [node name="SpotLight" type="SpotLight3D"]
 light_color = Color(0.709804, 0.780392, 0.180392, 1)
-light_energy = 8.082
+light_energy = 12.0
 light_indirect_energy = 3.64
-light_volumetric_fog_energy = 64.0
+light_volumetric_fog_energy = 128.0
 light_size = 1.0
+light_specular = 15.0
 spot_range = 87.6512
 spot_angle = 4.20963
 script = ExtResource("1_34gbe")
@@ -32,5 +34,8 @@ transform = Transform3D(1, 0, 0, 0, -3.8147e-06, -1, 0, 20, -2.98023e-08, 0, 9.5
 visible = false
 transparency = 0.75
 mesh = SubResource("CylinderMesh_k1vsl")
+
+[node name="SpotlightMesh" parent="." instance=ExtResource("2_8j7jl")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
