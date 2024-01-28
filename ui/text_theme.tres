@@ -1,7 +1,7 @@
-[gd_resource type="Theme" load_steps=2 format=3 uid="uid://bwkh88618xc5e"]
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://b1nned5wlbfky"]
 
-[ext_resource type="FontFile" uid="uid://b2uxa7p7qgq3a" path="res://ui/font/SpanishCircus.ttf" id="1_t1ter"]
+[ext_resource type="FontFile" uid="uid://c0ney16b7ni64" path="res://ui/fonts/SpanishCircus.ttf" id="1_saku6"]
 
 [resource]
-default_font = ExtResource("1_t1ter")
+default_font = ExtResource("1_saku6")
 default_font_size = 92

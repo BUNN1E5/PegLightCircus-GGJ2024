@@ -1,10 +1,11 @@
-[gd_scene load_steps=14 format=3 uid="uid://buxk3y0dnnq5e"]
+[gd_scene load_steps=15 format=3 uid="uid://4w78e5stdug4"]
 
 [ext_resource type="Script" path="res://ui/ending.gd" id="1_03wr4"]
-[ext_resource type="FontFile" uid="uid://c5cmie8vxq5yp" path="res://ui/fonts/Headlinetext.ttf" id="1_qe0lp"]
-[ext_resource type="FontFile" uid="uid://djd5ryhkde34s" path="res://ui/fonts/Cardo-Regular.ttf" id="2_vh43d"]
-[ext_resource type="Texture2D" uid="uid://b3dn8u8i6iwvc" path="res://ui/bad_ending_image_1.png" id="3_26vvf"]
-[ext_resource type="Texture2D" uid="uid://d0wbnlum1ntr1" path="res://ui/bad_ending_image_1_color.png" id="5_ksx2q"]
+[ext_resource type="FontFile" uid="uid://w2tsh7trb72s" path="res://ui/fonts/Headlinetext.ttf" id="1_qe0lp"]
+[ext_resource type="FontFile" uid="uid://bybflb60413wb" path="res://ui/fonts/Cardo-Regular.ttf" id="2_vh43d"]
+[ext_resource type="Texture2D" uid="uid://c66qclilfeexh" path="res://ui/bad_ending_image_1.png" id="3_26vvf"]
+[ext_resource type="FontFile" uid="uid://uo2b1p030y4j" path="res://ui/fonts/Cardo-Bold.ttf" id="4_p7x1f"]
+[ext_resource type="Texture2D" uid="uid://fiqliec7addr" path="res://ui/bad_ending_image_1_color.png" id="5_ksx2q"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lj6q2"]
 bg_color = Color(0.717647, 0.717647, 0.717647, 1)
@@ -38,6 +39,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_03wr4")
+metadata/success = true
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -66,7 +68,7 @@ grow_vertical = 2
 rotation = -0.405999
 theme_override_styles/panel = SubResource("StyleBoxFlat_wdbmp")
 
-[node name="Label" type="Label" parent="."]
+[node name="Title" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -83,6 +85,18 @@ theme_override_fonts/font = ExtResource("1_qe0lp")
 theme_override_font_sizes/font_size = 90
 text = "PEGSONVILLE NEWS"
 
+[node name="Date" type="Label" parent="."]
+offset_left = -1.99999
+offset_top = 476.0
+offset_right = 493.0
+offset_bottom = 501.0
+rotation = -0.411134
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_vh43d")
+theme_override_font_sizes/font_size = 18
+text = "Sunday, January 28th, 2024
+"
+
 [node name="Line2D" type="Line2D" parent="."]
 position = Vector2(-155.796, 66.0307)
 rotation = 0.00198872
@@ -91,24 +105,38 @@ points = PackedVector2Array(132, 339, 419.816, 212.167, 1046.12, -63.8308)
 width = 1.0
 default_color = Color(0.384314, 0.384314, 0.384314, 0.784314)
 
-[node name="Label2" type="Label" parent="."]
+[node name="Subtitle" type="Label" parent="."]
 layout_mode = 0
-offset_left = 274.0
-offset_top = 349.0
-offset_right = 769.0
-offset_bottom = 374.0
+offset_left = 327.0
+offset_top = 335.0
+offset_right = 822.0
+offset_bottom = 360.0
 rotation = -0.411134
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_vh43d")
 theme_override_font_sizes/font_size = 18
 text = "A totally real newspaper you can pickup at your local liquor store"
 
-[node name="Label3" type="Label" parent="."]
+[node name="Header" type="Label" parent="."]
+offset_left = 467.0
+offset_top = 316.0
+offset_right = 1112.0
+offset_bottom = 374.0
+rotation = -0.400183
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource("4_p7x1f")
+theme_override_font_sizes/font_size = 42
+text = "Circus Shmucks out of luck!"
+autowrap_mode = 2
+
+[node name="Body" type="Label" parent="."]
 layout_mode = 0
-offset_left = 459.0
-offset_top = 320.0
-offset_right = 1225.0
-offset_bottom = 933.0
+offset_left = 494.0
+offset_top = 384.0
+offset_right = 1260.0
+offset_bottom = 997.0
 rotation = -0.400183
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_vh43d")
