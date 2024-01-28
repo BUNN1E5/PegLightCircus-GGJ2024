@@ -1,12 +1,19 @@
-[gd_scene load_steps=4 format=3 uid="uid://4l30ijkcswfi"]
+[gd_scene load_steps=5 format=3 uid="uid://4l30ijkcswfi"]
 
 [ext_resource type="PackedScene" uid="uid://b071mrnxrsjgj" path="res://models/pegson/audience_member/audience_member.blend" id="1_cr6io"]
 [ext_resource type="Texture2D" uid="uid://soywwhvcvgnq" path="res://models/pegson/audience_member/audience_member_texture.png" id="2_gjqhf"]
+[ext_resource type="AnimationLibrary" uid="uid://02tta3w4mg3m" path="res://models/pegson/pegson_base_animations.res" id="3_bfs37"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8nxai"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u122h"]
 albedo_texture = ExtResource("2_gjqhf")
 
 [node name="Audience_Member" instance=ExtResource("1_cr6io")]
 
-[node name="Ringmaster" parent="." index="0"]
-material_override = SubResource("StandardMaterial3D_8nxai")
+[node name="body" parent="." index="0"]
+transform = Transform3D(0.102542, 0.018801, 0.00919773, -0.0188502, 0.102944, -0.000273625, -0.00909643, -0.00138856, 0.104251, 0, 0.083186, 0)
+material_override = SubResource("StandardMaterial3D_u122h")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="1"]
+libraries = {
+"pegson_base_animations": ExtResource("3_bfs37")
+}

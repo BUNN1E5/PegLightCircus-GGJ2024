@@ -4,14 +4,13 @@
 [ext_resource type="Texture2D" uid="uid://b6gi34fhd2ir8" path="res://models/pegson/clown/pegson_clown_texture.png" id="2_4g34b"]
 [ext_resource type="AnimationLibrary" uid="uid://02tta3w4mg3m" path="res://models/pegson/pegson_base_animations.res" id="3_5mnls"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nnsho"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2gabi"]
 albedo_texture = ExtResource("2_4g34b")
 
 [node name="pegson_clown" instance=ExtResource("1_ph2un")]
 
-[node name="pegsonClown" parent="." index="0"]
-transform = Transform3D(0.104201, 0.00310434, 0.00923946, -0.00309187, 0.10461, -0.000278054, -0.00924364, 3.88234e-06, 0.104247, 0, 0.123468, 0)
-material_override = SubResource("StandardMaterial3D_nnsho")
+[node name="body" parent="." index="0"]
+material_override = SubResource("StandardMaterial3D_2gabi")
 
 [node name="AnimationPlayer" parent="." index="1"]
 libraries = {

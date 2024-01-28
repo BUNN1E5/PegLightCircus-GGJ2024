@@ -1,0 +1,12 @@
+[gd_scene load_steps=4 format=3 uid="uid://cvlk6mvluf6fi"]
+
+[ext_resource type="PackedScene" uid="uid://bffp2ljaf4wh4" path="res://models/props/stretcher/stretcher.blend" id="1_ee1ds"]
+[ext_resource type="Texture2D" uid="uid://6c67igw71l8n" path="res://models/props/stretcher/stretcher_texture.png" id="2_5am6u"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l4yg0"]
+albedo_texture = ExtResource("2_5am6u")
+
+[node name="stretcher" instance=ExtResource("1_ee1ds")]
+
+[node name="stretcher_001" parent="." index="0"]
+material_override = SubResource("StandardMaterial3D_l4yg0")

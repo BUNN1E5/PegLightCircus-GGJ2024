@@ -1,0 +1,41 @@
+[gd_scene load_steps=7 format=3 uid="uid://bvqnh5gflywp6"]
+
+[ext_resource type="PackedScene" uid="uid://dvnhtjq5k2gpt" path="res://models/pegson/ringmaster/pegson_ringmaster.tscn" id="1_rh86o"]
+[ext_resource type="PackedScene" uid="uid://4l30ijkcswfi" path="res://models/pegson/audience_member/audience_member.tscn" id="3_58yw8"]
+[ext_resource type="PackedScene" uid="uid://cd3nc5gd6wn4a" path="res://models/pegson/clown/pegson_clown.tscn" id="3_qtvbh"]
+[ext_resource type="PackedScene" uid="uid://bl6owwpn2ufdt" path="res://models/props/juggling_balls/juggling_balls.tscn" id="4_tw7de"]
+[ext_resource type="PackedScene" uid="uid://cvlk6mvluf6fi" path="res://models/props/stretcher/stretcher.tscn" id="5_ey242"]
+[ext_resource type="PackedScene" uid="uid://di1sxfwhwo7rn" path="res://models/props/unicycle/unicycle.tscn" id="6_q78kb"]
+
+[node name="AnimationTest" type="Node3D"]
+
+[node name="pegson_clown" parent="." instance=ExtResource("3_qtvbh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="body" parent="pegson_clown" index="0"]
+transform = Transform3D(0.104151, 0.00341187, 0.00968082, -0.00338196, 0.1046, -0.000479936, -0.00969131, 0.000164785, 0.104206, 0, 0.123468, 0)
+
+[node name="pegson_ringmaster" parent="." instance=ExtResource("1_rh86o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0155149, 0, -0.0308623)
+
+[node name="body" parent="pegson_ringmaster" index="0"]
+transform = Transform3D(0.103809, 0.00589075, 0.0119066, -0.00616234, 0.104454, 0.00204884, -0.0117683, -0.00273335, 0.103956, 0, 0.123468, 0)
+
+[node name="Audience_Member" parent="." instance=ExtResource("3_58yw8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.42068, 0, -0.0730653)
+
+[node name="body" parent="Audience_Member" index="0"]
+transform = Transform3D(0.104518, 0.00269657, 0.00464563, -0.00266771, 0.10462, -0.000708361, -0.00466226, 0.000589007, 0.104551, 0, 0.123468, 0)
+
+[node name="juggling_balls" parent="." instance=ExtResource("4_tw7de")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.03413, 0, 0.0276599)
+
+[node name="stretcher" parent="." instance=ExtResource("5_ey242")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.91787, 0, -0.674207)
+
+[node name="unicycle" parent="." instance=ExtResource("6_q78kb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.66415, 0, -0.218918)
+
+[editable path="pegson_clown"]
+[editable path="pegson_ringmaster"]
+[editable path="Audience_Member"]
