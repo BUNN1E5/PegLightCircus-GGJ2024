@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://dvnhtjq5k2gpt"]
+
+[ext_resource type="PackedScene" uid="uid://bj5ihigkbj2ox" path="res://models/pegson/ringmaster/pegson_ringmaster.blend" id="1_1kb87"]
+[ext_resource type="Texture2D" uid="uid://c8f00dh1j00lp" path="res://models/pegson/ringmaster/pegson_ringmaster_texture.png" id="2_1f2rf"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pqe4a"]
+albedo_texture = ExtResource("2_1f2rf")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gmg1u"]
+albedo_texture = ExtResource("2_1f2rf")
+
+[node name="pegsonModels_ringmaster" instance=ExtResource("1_1kb87")]
+
+[node name="Ringmaster" parent="." index="0"]
+material_override = SubResource("StandardMaterial3D_pqe4a")
+
+[node name="ringmasterhat" parent="." index="1"]
+material_override = SubResource("StandardMaterial3D_gmg1u")

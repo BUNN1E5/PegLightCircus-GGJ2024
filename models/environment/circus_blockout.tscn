@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://ccx1wtrvrl1vk"]
 
-[ext_resource type="PackedScene" uid="uid://y306fk1hhkax" path="res://models/Environment/circus_blockout.blend" id="1_a5pd7"]
+[ext_resource type="PackedScene" uid="uid://y306fk1hhkax" path="res://models/environment/circus_blockout.blend" id="1_a5pd7"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4dsxi"]
 rim = 0.3
@@ -21,5 +21,4 @@ light_indirect_energy = 5.0
 light_volumetric_fog_energy = 4.0
 
 [node name="tentTop" parent="." index="10"]
-visible = false
 surface_material_override/0 = SubResource("StandardMaterial3D_4dsxi")

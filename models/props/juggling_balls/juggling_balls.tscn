@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://bl6owwpn2ufdt"]
+
+[ext_resource type="PackedScene" uid="uid://ctqn4e60pgsf5" path="res://models/props/juggling_balls/juggling_balls.blend" id="1_5uuoo"]
+[ext_resource type="Texture2D" uid="uid://btlksdo8nwemi" path="res://models/props/juggling_balls/juggling_balls_texture.png" id="2_8jcwx"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0f6b6"]
+albedo_texture = ExtResource("2_8jcwx")
+
+[node name="juggling_balls" instance=ExtResource("1_5uuoo")]
+
+[node name="red-ball" parent="." index="0"]
+material_override = SubResource("StandardMaterial3D_0f6b6")
+
+[node name="blue" parent="." index="1"]
+material_override = SubResource("StandardMaterial3D_0f6b6")
+
+[node name="green" parent="." index="2"]
+material_override = SubResource("StandardMaterial3D_0f6b6")
