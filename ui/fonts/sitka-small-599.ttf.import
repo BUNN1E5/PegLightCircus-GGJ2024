@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://bl28gg1u5smqo"
-path="res://.godot/imported/SpanishCircus.otf-9df5ffb9f85dfd981233508a8b6ed237.fontdata"
+uid="uid://dvchm3iekhs67"
+path="res://.godot/imported/sitka-small-599.ttf-d0da1b8b480ae067ef5494042e0cc6e8.fontdata"
 
 [deps]
 
-source_file="res://ui/fonts/SpanishCircus.otf"
-dest_files=["res://.godot/imported/SpanishCircus.otf-9df5ffb9f85dfd981233508a8b6ed237.fontdata"]
+source_file="res://ui/fonts/sitka-small-599.ttf"
+dest_files=["res://.godot/imported/sitka-small-599.ttf-d0da1b8b480ae067ef5494042e0cc6e8.fontdata"]
 
 [params]
 

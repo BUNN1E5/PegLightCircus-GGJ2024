@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://bl28gg1u5smqo"
-path="res://.godot/imported/SpanishCircus.otf-9df5ffb9f85dfd981233508a8b6ed237.fontdata"
+uid="uid://cqnaoe5gb5d57"
+path="res://.godot/imported/Cardo-Regular.ttf-0fdfedebd5bf2f3a6b2324cfdc16485d.fontdata"
 
 [deps]
 
-source_file="res://ui/fonts/SpanishCircus.otf"
-dest_files=["res://.godot/imported/SpanishCircus.otf-9df5ffb9f85dfd981233508a8b6ed237.fontdata"]
+source_file="res://ui/fonts/Cardo-Regular.ttf"
+dest_files=["res://.godot/imported/Cardo-Regular.ttf-0fdfedebd5bf2f3a6b2324cfdc16485d.fontdata"]
 
 [params]
 

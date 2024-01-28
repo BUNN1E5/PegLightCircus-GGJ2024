@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=3 uid="uid://c6it73womfku8"]
+
+[ext_resource type="Script" path="res://scripts/spotlight.gd" id="1_e7ugd"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_k1vsl"]
+
+[node name="SpotLight" type="SpotLight3D"]
+transform = Transform3D(1, 0, 0, 0, 0.876735, 0.480973, 0, -0.480973, 0.876735, -1.22077, 6.919, 11.8977)
+light_color = Color(0.709804, 0.780392, 0.180392, 1)
+light_energy = 8.082
+light_indirect_energy = 3.64
+light_volumetric_fog_energy = 64.0
+light_size = 1.0
+spot_range = 87.6512
+spot_angle = 4.20963
+script = ExtResource("1_e7ugd")
+input_name_prefix = "right_light"
+use_mouse = true
+speed = 0.25
+smooth_value = 30.0
+
+[node name="Area3D" type="Area3D" parent="."]
+input_ray_pickable = false
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -15)
+depth = -30.0
+disabled = true
+polygon = PackedVector2Array(-1, -1, 1, -1, 1, 1, -1, 1)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -3.8147e-06, -1, 0, 20, -2.98023e-08, 0, 9.53674e-07, -20)
+transparency = 0.75
+mesh = SubResource("CylinderMesh_k1vsl")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

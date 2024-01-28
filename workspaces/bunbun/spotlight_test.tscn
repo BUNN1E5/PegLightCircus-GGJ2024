@@ -1,66 +1,41 @@
-[gd_scene load_steps=9 format=3 uid="uid://daihumkpag611"]
+[gd_scene load_steps=6 format=3 uid="uid://daihumkpag611"]
 
-[ext_resource type="Script" path="res://workspaces/bunbun/spotlight.gd" id="1_kqx6a"]
-[ext_resource type="Environment" uid="uid://dk5cqk6373bwl" path="res://globals/default_enviroment.tres" id="1_yenxp"]
-[ext_resource type="CameraAttributesPhysical" uid="uid://c27pks55vtiyw" path="res://globals/camera_attributes.tres" id="2_hbqte"]
-[ext_resource type="PackedScene" uid="uid://ccx1wtrvrl1vk" path="res://models/environment/circus_blockout.tscn" id="4_0p4jc"]
-[ext_resource type="PackedScene" uid="uid://dj4bve2y02nhc" path="res://globals/world_environment.tscn" id="4_j6875"]
+[ext_resource type="PackedScene" uid="uid://c6it73womfku8" path="res://entities/spot_light.tscn" id="3_ovm3k"]
+[ext_resource type="PackedScene" uid="uid://dj4bve2y02nhc" path="res://globals/world_environment.tscn" id="5_gwp0f"]
 
-[sub_resource type="CylinderMesh" id="CylinderMesh_vkmre"]
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_5pr01"]
+dof_blur_near_transition = 10.0
 
-[sub_resource type="BoxMesh" id="BoxMesh_qrbme"]
+[sub_resource type="BoxMesh" id="BoxMesh_rcrna"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_wqugq"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_qcylc"]
 
 [node name="SpotlightTest" type="Node3D"]
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.814683, 0.579907, 0, -0.579907, 0.814683, 0, 7.37442, 8.24987)
-environment = ExtResource("1_yenxp")
-attributes = ExtResource("2_hbqte")
-
-[node name="SpotLight3D" type="SpotLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.22077, 2.63862, 5.05214)
-light_energy = 5.202
-light_volumetric_fog_energy = 16.0
-spot_range = 9.12584
-spot_angle = 9.9223
-script = ExtResource("1_kqx6a")
+[node name="SpotLight2" parent="." instance=ExtResource("3_ovm3k")]
+transform = Transform3D(-0.920993, 0.388318, -0.0313229, 0.294441, 0.746475, 0.596723, 0.2551, 0.540355, -0.801835, 4.57657, 12.0078, -12.7914)
 camera_node_path = NodePath("../Camera3D")
 
-[node name="Area3D" type="Area3D" parent="SpotLight3D"]
-input_ray_pickable = false
+[node name="MeshInstance3D" parent="SpotLight2" index="1"]
+skeleton = NodePath("../../SpotLight2")
 
-[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="SpotLight3D/Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
-depth = 10.0
-disabled = true
-polygon = PackedVector2Array(-1, -1, 1, -1, 1, 1, -1, 1)
+[node name="SpotLight" parent="." instance=ExtResource("3_ovm3k")]
+transform = Transform3D(-0.616445, 0.378717, -0.690339, 0, 0.876735, 0.480973, 0.787398, 0.296494, -0.540459, -14.0343, 14.2662, -7.3065)
+camera_node_path = NodePath("../Camera3D")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="SpotLight3D"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-07, 1, 0, -10, -4.37114e-08, 0, 0, -10)
-visible = false
-mesh = SubResource("CylinderMesh_vkmre")
-
-[node name="Marker3D" type="Marker3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.94061, -2.24387, 1.83473)
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -0.157934, 0.98745, 0, -0.98745, -0.157934, 0, 0, 0)
-light_energy = 0.234
-
-[node name="circus_blockout" parent="." instance=ExtResource("4_0p4jc")]
-visible = false
-
-[node name="WorldEnvironment" parent="." instance=ExtResource("4_j6875")]
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-1, 8.74228e-08, 0, 7.43803e-08, 0.850811, 0.525472, 4.59382e-08, 0.525472, -0.850811, 0, 3.19449, -5.97888)
+attributes = SubResource("CameraAttributesPractical_5pr01")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(10, 0, 0, 0, 0.1, 0, 0, 0, 10, 0, 0, 0)
-mesh = SubResource("BoxMesh_qrbme")
+transform = Transform3D(20, 0, 0, 0, 0.001, 0, 0, 0, 20, 0, 0, 0)
+mesh = SubResource("BoxMesh_rcrna")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
-shape = SubResource("BoxShape3D_wqugq")
+shape = SubResource("BoxShape3D_qcylc")
 
-[connection signal="body_entered" from="SpotLight3D/Area3D" to="SpotLight3D" method="_on_area_3d_body_entered"]
+[node name="WorldEnvironment" parent="." instance=ExtResource("5_gwp0f")]
+
+[editable path="SpotLight2"]

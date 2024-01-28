@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://6c67igw71l8n"
-path.s3tc="res://.godot/imported/stretcher_texture.png-2ed41cf0a75b5d414691d555bfd2f573.s3tc.ctex"
+uid="uid://c8qf8yoidvngd"
+path.s3tc="res://.godot/imported/pegson_clown_normals.png-bdeeaf3a6f1f4e1891139290fa5bebad.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://models/props/stretcher/stretcher_texture.png"
-dest_files=["res://.godot/imported/stretcher_texture.png-2ed41cf0a75b5d414691d555bfd2f573.s3tc.ctex"]
+source_file="res://models/pegson/clown/pegson_clown_normals.png"
+dest_files=["res://.godot/imported/pegson_clown_normals.png-bdeeaf3a6f1f4e1891139290fa5bebad.s3tc.ctex"]
 
 [params]
 
@@ -20,12 +20,12 @@ compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
-compress/normal_map=0
+compress/normal_map=1
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
-roughness/mode=0
-roughness/src_normal=""
+roughness/mode=1
+roughness/src_normal="res://models/pegson/clown/pegson_clown_normals.png"
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false

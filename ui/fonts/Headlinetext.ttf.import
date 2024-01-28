@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://bl28gg1u5smqo"
-path="res://.godot/imported/SpanishCircus.otf-9df5ffb9f85dfd981233508a8b6ed237.fontdata"
+uid="uid://b6ryeaduawb2r"
+path="res://.godot/imported/Headlinetext.ttf-3a79ad7f478d458af495cc6bed8d4191.fontdata"
 
 [deps]
 
-source_file="res://ui/fonts/SpanishCircus.otf"
-dest_files=["res://.godot/imported/SpanishCircus.otf-9df5ffb9f85dfd981233508a8b6ed237.fontdata"]
+source_file="res://ui/fonts/Headlinetext.ttf"
+dest_files=["res://.godot/imported/Headlinetext.ttf-3a79ad7f478d458af495cc6bed8d4191.fontdata"]
 
 [params]
 

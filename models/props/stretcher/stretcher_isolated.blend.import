@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bffp2ljaf4wh4"
-path="res://.godot/imported/stretcher.blend-a5e17e60de1718baa10eb3ff007db98b.scn"
+uid="uid://drkns2vn7y3l7"
+path="res://.godot/imported/stretcher_isolated.blend-58dde0d2002200f0ce89b0bf249c8ed3.scn"
 
 [deps]
 
-source_file="res://models/props/stretcher/stretcher.blend"
-dest_files=["res://.godot/imported/stretcher.blend-a5e17e60de1718baa10eb3ff007db98b.scn"]
+source_file="res://models/props/stretcher/stretcher_isolated.blend"
+dest_files=["res://.godot/imported/stretcher_isolated.blend-58dde0d2002200f0ce89b0bf249c8ed3.scn"]
 
 [params]
 

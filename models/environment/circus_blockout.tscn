@@ -8,17 +8,20 @@ distance_fade_max_distance = 56.02
 
 [node name="circus_blockout" instance=ExtResource("1_a5pd7")]
 
-[node name="Spotlight1" parent="." index="6"]
+[node name="Spotlight1" parent="." index="5"]
 transform = Transform3D(0.0826848, -0.996575, -0.00125561, 0.819753, 0.0672975, 0.56875, -0.566717, -0.0480563, 0.82251, 0, 9.99875, 14.1913)
 light_energy = 8.0
 light_indirect_energy = 5.0
 light_volumetric_fog_energy = 4.0
 
-[node name="Spotlight2" parent="." index="7"]
+[node name="Spotlight2" parent="." index="6"]
 transform = Transform3D(0.798604, 0.600256, -0.043873, 0.488171, -0.603393, 0.63056, 0.352025, -0.524985, -0.7749, -0.526731, 10.6409, -13.8786)
 light_energy = 8.0
 light_indirect_energy = 5.0
 light_volumetric_fog_energy = 4.0
 
-[node name="tentTop" parent="." index="10"]
+[node name="tentTop" parent="." index="9"]
 surface_material_override/0 = SubResource("StandardMaterial3D_4dsxi")
+
+[node name="tentTop_001" parent="." index="11"]
+visible = false
