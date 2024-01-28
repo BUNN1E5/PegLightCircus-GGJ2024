@@ -48,24 +48,29 @@ _subresources={
 "physics/shape_type": 2
 },
 "PATH:ground": {
+"generate/navmesh": 1,
 "generate/physics": true
 },
 "PATH:pedastal": {
 "generate/physics": true
 },
 "PATH:seats_001": {
+"generate/navmesh": 1,
 "generate/physics": true,
 "physics/shape_type": 2
 },
 "PATH:seats_002": {
+"generate/navmesh": 1,
 "generate/physics": true,
 "physics/shape_type": 2
 },
 "PATH:seats_003": {
+"generate/navmesh": 1,
 "generate/physics": true,
 "physics/shape_type": 2
 },
 "PATH:seats_004": {
+"generate/navmesh": 1,
 "generate/physics": true,
 "physics/shape_type": 2
 },

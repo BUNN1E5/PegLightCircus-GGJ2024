@@ -36,15 +36,20 @@ func _move_light(move : Vector2):
 	marker.position += z_relative
 	self.look_at(marker.position)
 	pass
-	
+
+var energy : float = 0
 func _set_light(enabled : bool):
+	if enabled:
+		self.light_energy = energy
+		AudienceManager.add_target(marker)
+	else:
+		energy = self.light_energy
+		self.light_energy = 0
+		AudienceManager.remove_target(marker)
 	spotlight_on = enabled
 	light_collider.set_process(enabled)
 	self.set_process(enabled)
-	if enabled:
-		AudienceManager.add_target(marker)
-	else:
-		AudienceManager.remove_target(marker)
+
 	
 
 func _controller_stick(): # Do we wanna make the curse a x^2 curve it's normalized to 1 anyways and will make joystick easier
