@@ -1,7 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://cxunels6ylmo6"]
+[gd_scene load_steps=14 format=3 uid="uid://cxunels6ylmo6"]
 
-[ext_resource type="FontFile" uid="uid://cl03xqkm8mvwk" path="res://ui/fonts/Headlinetext.ttf" id="1_qe0lp"]
-[ext_resource type="FontFile" uid="uid://hw5dss1dh288" path="res://ui/fonts/Cardo-Regular.ttf" id="2_vh43d"]
+[ext_resource type="Script" path="res://ui/ending.gd" id="1_03wr4"]
+[ext_resource type="FontFile" uid="uid://basouxc5fspsr" path="res://ui/fonts/Headlinetext.ttf" id="1_qe0lp"]
+[ext_resource type="FontFile" uid="uid://cr4nspjnp5qbg" path="res://ui/fonts/Cardo-Regular.ttf" id="2_vh43d"]
+[ext_resource type="Texture2D" uid="uid://xpta7aha7vly" path="res://ui/bad_ending_image_1.png" id="3_26vvf"]
+[ext_resource type="Texture2D" uid="uid://bwrq11dh8dmwj" path="res://ui/bad_ending_image_1_color.png" id="5_ksx2q"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lj6q2"]
 bg_color = Color(0.717647, 0.717647, 0.717647, 1)
@@ -15,6 +18,18 @@ bg_color = Color(0.6, 0.6, 0.6, 0)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f8keo"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r3g57"]
+bg_color = Color(0, 0, 0, 0.901961)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q1q4k"]
+bg_color = Color(0, 0, 0, 0.901961)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jp3c6"]
+bg_color = Color(0, 0, 0, 0.901961)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_it3vk"]
+bg_color = Color(0, 0, 0, 0.901961)
+
 [node name="Ending" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -22,14 +37,17 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_03wr4")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = -3.0
-offset_bottom = -8.0
+offset_left = -17.0
+offset_top = -13.0
+offset_right = 22.0
+offset_bottom = 6.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_lj6q2")
@@ -87,20 +105,20 @@ text = "A totally real newspaper you can pickup at your local liquor store"
 
 [node name="Label3" type="Label" parent="."]
 layout_mode = 0
-offset_left = 440.0
-offset_top = 341.0
-offset_right = 1277.0
-offset_bottom = 954.0
+offset_left = 459.0
+offset_top = 320.0
+offset_right = 1225.0
+offset_bottom = 933.0
 rotation = -0.400183
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_vh43d")
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 28
 text = "Visiting local circus royally bombs their first visit to Pegsonville. What a travesty. Local citizen, Beverly Woodicka, looking to sue, suffered from external splintering of the utmost degree. \"I just wanted to have fun.\" she says on her deathbed. Officials say this stems from the horrific acts rooted from this deathly circus. Peg Light Circus, more like leave. While you still can. It's not on us. Authoritrees are still for the perpratrators as they picked up and left.
 
 Up next in other news, new recipe for keeping your wood waxed and free of waterlogging your pores. As I have always said, Betty Rocker swears on butter. One could have never guessed these strange remedies for our wooden complexions. More on the way."
 autowrap_mode = 2
 
-[node name="Button" type="Button" parent="."]
+[node name="PlayAgainButton" type="Button" parent="."]
 layout_mode = 0
 offset_left = 9.0
 offset_top = 11.0
@@ -111,3 +129,46 @@ theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_lmw7n")
 theme_override_styles/focus = SubResource("StyleBoxFlat_f8keo")
 text = "Play Again?"
+
+[node name="ImageButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.002
+anchor_top = 1.005
+anchor_right = 0.002
+anchor_bottom = 1.005
+offset_left = -49.304
+offset_top = -113.24
+offset_right = 481.696
+offset_bottom = 365.76
+rotation = -0.390215
+
+[node name="BadEndingImage1" type="Sprite2D" parent="ImageButton"]
+position = Vector2(266.047, 245.106)
+rotation = -0.00718305
+scale = Vector2(0.659043, 0.658037)
+texture = ExtResource("3_26vvf")
+
+[node name="BadEndingImage" type="Button" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.999
+anchor_bottom = 0.989
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 17.1519
+offset_bottom = 19.128
+theme_override_styles/normal = SubResource("StyleBoxFlat_r3g57")
+theme_override_styles/hover = SubResource("StyleBoxFlat_q1q4k")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jp3c6")
+theme_override_styles/focus = SubResource("StyleBoxFlat_it3vk")
+
+[node name="BadEndingImage1Color" type="Sprite2D" parent="BadEndingImage"]
+position = Vector2(620, 346)
+scale = Vector2(0.682505, 0.736409)
+texture = ExtResource("5_ksx2q")
+
+[connection signal="pressed" from="PlayAgainButton" to="." method="_on_play_again_button_pressed"]
+[connection signal="pressed" from="ImageButton" to="." method="_on_image_button_pressed"]
+[connection signal="pressed" from="BadEndingImage" to="." method="_on_bad_ending_image_pressed"]
