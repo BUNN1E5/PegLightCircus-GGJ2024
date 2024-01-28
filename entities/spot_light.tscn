@@ -6,12 +6,12 @@
 [sub_resource type="CylinderMesh" id="CylinderMesh_k1vsl"]
 
 [node name="SpotLight" type="SpotLight3D"]
-light_color = Color(0.709804, 0.780392, 0.180392, 1)
+light_color = Color(0.85, 0.706633, 0.476, 1)
 light_energy = 12.0
 light_indirect_energy = 3.64
 light_volumetric_fog_energy = 128.0
 light_size = 1.0
-light_specular = 15.0
+light_specular = 64.0
 spot_range = 87.6512
 spot_angle = 4.20963
 script = ExtResource("1_34gbe")

@@ -37,15 +37,12 @@ func _move_light(move : Vector2):
 	self.look_at(marker.position)
 	pass
 
-var energy : float = 0
 func _set_light(enabled : bool):
 	if enabled:
-		self.light_energy = energy
 		AudienceManager.add_target(marker)
 	else:
-		energy = self.light_energy
-		self.light_energy = 0
 		AudienceManager.remove_target(marker)
+	self.visisble = enabled
 	spotlight_on = enabled
 	light_collider.set_process(enabled)
 	self.set_process(enabled)

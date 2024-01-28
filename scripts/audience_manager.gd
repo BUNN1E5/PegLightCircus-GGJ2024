@@ -3,6 +3,10 @@ extends Node
 @export var targets : Array[Marker3D]
 @export var audience_members : Array[AudienceMember]
 
+@export_range(0, 1) var enjoyment : float  = 0.5
+@export_range(0, 1) var fear : float = 0
+
+
 func add_member(member : AudienceMember):
 	var index = audience_members.find(member) #This is terrible
 	if index != -1:
@@ -49,7 +53,6 @@ func _look_at_nearest_target():
 				closest_target = target
 		audience_member.root_node.look_at(-closest_target.position)
 		pass
-	
 
 func _process(delta):
 	_look_at_nearest_target()

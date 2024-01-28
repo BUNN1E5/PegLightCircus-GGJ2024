@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://q3nlgpva1vnx"]
+[gd_scene load_steps=7 format=3 uid="uid://q3nlgpva1vnx"]
 
 [ext_resource type="PackedScene" uid="uid://dlopfs386db8w" path="res://models/environment/circus_enviornment.tscn" id="2_cxbc8"]
 [ext_resource type="PackedScene" uid="uid://c6it73womfku8" path="res://entities/spot_light.tscn" id="2_p30wt"]
 [ext_resource type="PackedScene" uid="uid://dj4bve2y02nhc" path="res://globals/world_environment.tscn" id="2_u2gwl"]
+[ext_resource type="PackedScene" uid="uid://dq84h37cj0avl" path="res://ui/main_menu.tscn" id="4_cp2ug"]
+[ext_resource type="PackedScene" uid="uid://cqqqf8abfey2s" path="res://ui/controls.tscn" id="5_83ugw"]
+[ext_resource type="PackedScene" uid="uid://4w78e5stdug4" path="res://ui/ending.tscn" id="6_1tn7v"]
 
 [node name="Node3D" type="Node3D"]
 
@@ -10,6 +13,8 @@
 
 [node name="SpotLight2" parent="." instance=ExtResource("2_p30wt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.007, 15.3239, -2.41729)
+light_energy = 27.28
+light_specular = 32.0
 camera_node_path = NodePath("../circus_Enviorment/Camera_playerview")
 input_name_prefix = "left_light"
 use_mouse = false
@@ -21,4 +26,48 @@ use_mouse = false
 
 [node name="WorldEnvironment" parent="." instance=ExtResource("2_u2gwl")]
 
+[node name="Menu" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="MainMenu" parent="Menu" instance=ExtResource("4_cp2ug")]
+visible = false
+layout_mode = 1
+offset_left = 377.0
+offset_top = 208.0
+offset_right = 377.0
+offset_bottom = 208.0
+controls_node_path = NodePath("../Controls")
+
+[node name="Ending" parent="Menu" instance=ExtResource("6_1tn7v")]
+visible = false
+layout_mode = 1
+
+[node name="Controls" parent="Menu" instance=ExtResource("5_83ugw")]
+visible = false
+layout_mode = 1
+offset_left = 533.0
+offset_top = 311.0
+offset_right = 533.0
+offset_bottom = 311.0
+main_menu_node_path = NodePath("../MainMenu")
+
+[node name="VBoxContainer" parent="Menu/Controls" index="0"]
+offset_left = -182.0
+offset_top = -308.0
+offset_right = 191.0
+offset_bottom = 201.0
+
+[node name="VSeparator" parent="Menu/Controls/HBoxContainer" index="1"]
+modulate = Color(1, 1, 1, 0)
+
+[node name="MenuButton" parent="Menu/Controls" index="2"]
+offset_left = -511.0
+offset_top = -288.0
+offset_right = -378.0
+offset_bottom = -235.0
+
 [editable path="circus_Enviorment"]
+[editable path="Menu/Controls"]
