@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://4w78e5stdug4"]
+[gd_scene load_steps=18 format=3 uid="uid://4w78e5stdug4"]
 
 [ext_resource type="Script" path="res://ui/ending.gd" id="1_03wr4"]
 [ext_resource type="FontFile" uid="uid://w2tsh7trb72s" path="res://ui/fonts/Headlinetext.ttf" id="1_qe0lp"]
@@ -14,6 +14,9 @@ bg_color = Color(0.717647, 0.717647, 0.717647, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wdbmp"]
 bg_color = Color(0.278431, 0.427451, 0.0431373, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_80nuk"]
+bg_color = Color(0.65098, 0, 0.168627, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lmw7n"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -57,6 +60,7 @@ grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_lj6q2")
 
 [node name="GreenColoredPanel" type="Panel" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -76,14 +80,14 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -269.0
-offset_top = -120.0
-offset_right = -659.0
-offset_bottom = -357.0
+offset_left = -220.0
+offset_top = -85.0
+offset_right = -610.0
+offset_bottom = -322.0
 grow_horizontal = 2
 grow_vertical = 2
 rotation = -0.405999
-theme_override_styles/panel = SubResource("StyleBoxFlat_wdbmp")
+theme_override_styles/panel = SubResource("StyleBoxFlat_80nuk")
 
 [node name="Title" type="Label" parent="."]
 layout_mode = 1
@@ -147,7 +151,7 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 1
 theme_override_fonts/font = ExtResource("4_p7x1f")
 theme_override_font_sizes/font_size = 42
-text = "Circus Shmucks out of luck!"
+text = "Lorem ipsum dolor sit amet, consectetur"
 autowrap_mode = 2
 
 [node name="Body" type="Label" parent="."]
@@ -160,9 +164,9 @@ rotation = -0.400183
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_vh43d")
 theme_override_font_sizes/font_size = 28
-text = "Visiting local circus royally bombs their first visit to Pegsonville. What a travesty. Local citizen, Beverly Woodicka, looking to sue, suffered from external splintering of the utmost degree. \"I just wanted to have fun.\" she says on her deathbed. Officials say this stems from the horrific acts rooted from this deathly circus. Peg Light Circus, more like leave. While you still can. It's not on us. Authoritrees are still for the perpratrators as they picked up and left.
+text = "Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-Up next in other news, new recipe for keeping your wood waxed and free of waterlogging your pores. As I have always said, Betty Rocker swears on butter. One could have never guessed these strange remedies for our wooden complexions. More on the way."
+Varius morbi enim nunc faucibus a pellentesque sit amet. Duis at tellus at urna. Elit scelerisque mauris pellentesque pulvinar pellentesque. Fames ac turpis egestas sed. Congue mauris rhoncus aenean vel elit. Iaculis nunc sed augue lacus viverra vitae. Euismod in pellentesque massa placerat duis ultricies lacus. In hendrerit gravida rutrum quisque non tellus orci."
 autowrap_mode = 2
 
 [node name="PlayAgainButton" type="Button" parent="."]
