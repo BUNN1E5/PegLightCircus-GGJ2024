@@ -20,6 +20,7 @@ func _ready():
 	light_collider.connect("body_exited", _on_exit_spotlight)
 	self.look_at(Vector3.ZERO)
 	marker.set_gizmo_extents(10)
+	AudienceManager.add_target(marker)
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

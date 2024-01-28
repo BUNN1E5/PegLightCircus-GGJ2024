@@ -2,3 +2,4 @@
 
 [resource]
 ssao_enabled = true
+volumetric_fog_enabled = true

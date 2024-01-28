@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dlopfs386db8w"]
+[gd_scene load_steps=11 format=3 uid="uid://dlopfs386db8w"]
 
 [ext_resource type="PackedScene" uid="uid://dp54hsgyrv12m" path="res://models/environment/circus_Enviorment.blend" id="1_n7682"]
 [ext_resource type="Texture2D" uid="uid://dffgstpy1kogc" path="res://models/environment/seat_barrier_pedastal_col.png" id="2_vy5oe"]
@@ -16,13 +16,19 @@ normal_texture = ExtResource("3_ocqnx")
 height = 0.001
 radius = 5.0
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p7nog"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4seht"]
 albedo_texture = ExtResource("2_vy5oe")
 normal_enabled = true
 normal_scale = 8.0
 normal_texture = ExtResource("3_ocqnx")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_houi8"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b63ll"]
+albedo_texture = ExtResource("2_vy5oe")
+normal_enabled = true
+normal_scale = 8.0
+normal_texture = ExtResource("3_ocqnx")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_58qdq"]
 albedo_texture = ExtResource("2_vy5oe")
 normal_enabled = true
 normal_scale = 8.0
@@ -38,15 +44,38 @@ material_override = SubResource("StandardMaterial3D_ho24d")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ground/StaticBody3D" index="0"]
 shape = SubResource("CylinderShape3D_jtwa2")
 
-[node name="Camera_playerview" parent="." index="6"]
+[node name="Camera_playerview" parent="." index="5"]
 visible = false
 environment = ExtResource("4_705bk")
 attributes = ExtResource("5_8c57g")
 size = 14.478
 
-[node name="barrier" parent="." index="7"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00148559, 0.0136459, -0.00690079)
-material_override = SubResource("StandardMaterial3D_p7nog")
+[node name="barrier_004" parent="." index="6"]
+material_override = SubResource("StandardMaterial3D_4seht")
 
-[node name="seats" parent="." index="8"]
-material_override = SubResource("StandardMaterial3D_houi8")
+[node name="seats_004" parent="." index="7"]
+material_override = SubResource("StandardMaterial3D_b63ll")
+
+[node name="tightrope_platform" parent="." index="9"]
+material_override = SubResource("StandardMaterial3D_58qdq")
+
+[node name="tightrope" parent="." index="10"]
+material_override = SubResource("StandardMaterial3D_58qdq")
+
+[node name="seats_001" parent="." index="11"]
+material_override = SubResource("StandardMaterial3D_b63ll")
+
+[node name="seats_002" parent="." index="12"]
+material_override = SubResource("StandardMaterial3D_b63ll")
+
+[node name="seats_003" parent="." index="13"]
+material_override = SubResource("StandardMaterial3D_b63ll")
+
+[node name="barrier_001" parent="." index="15"]
+material_override = SubResource("StandardMaterial3D_4seht")
+
+[node name="barrier_002" parent="." index="16"]
+material_override = SubResource("StandardMaterial3D_4seht")
+
+[node name="barrier_003" parent="." index="17"]
+material_override = SubResource("StandardMaterial3D_4seht")

@@ -9,7 +9,7 @@
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u122h"]
 albedo_texture = ExtResource("2_gjqhf")
 
-[node name="Audience_Member" instance=ExtResource("1_cr6io")]
+[node name="audience_member" instance=ExtResource("1_cr6io")]
 
 [node name="body" parent="." index="0"]
 transform = Transform3D(0.104201, 0.00310434, 0.00923952, -0.00309187, 0.10461, -0.000278055, -0.00924365, 3.88233e-06, 0.104248, 0, 0.123468, 0)
@@ -24,7 +24,9 @@ autoplay = "pegson_base_animations/Idle"
 [node name="AudienceMember" type="Node" parent="." index="2"]
 script = ExtResource("4_c5ru5")
 root_node_path = NodePath("..")
+pegson_entity_path = NodePath("../PegsonEntity")
 
 [node name="PegsonEntity" type="Node" parent="." index="3" node_paths=PackedStringArray("anim_node")]
 script = ExtResource("2_iyn8h")
 anim_node = NodePath("../AnimationPlayer")
+active_nodes_path = Array[NodePath]([NodePath("../AudienceMember")])

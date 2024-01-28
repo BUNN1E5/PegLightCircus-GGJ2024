@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bvqnh5gflywp6"]
+[gd_scene load_steps=12 format=3 uid="uid://bvqnh5gflywp6"]
 
 [ext_resource type="PackedScene" uid="uid://dvnhtjq5k2gpt" path="res://models/pegson/ringmaster/pegson_ringmaster.tscn" id="1_rh86o"]
 [ext_resource type="PackedScene" uid="uid://4l30ijkcswfi" path="res://models/pegson/audience_member/audience_member.tscn" id="3_58yw8"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://dj4bve2y02nhc" path="res://globals/world_environment.tscn" id="8_omnu2"]
 [ext_resource type="CameraAttributesPractical" uid="uid://cto80wijwri8t" path="res://globals/camera_attributes_anim_test.tres" id="9_csk70"]
 [ext_resource type="PackedScene" uid="uid://c6it73womfku8" path="res://entities/spot_light.tscn" id="10_6oykc"]
+[ext_resource type="Script" path="res://scripts/audience_manager.gd" id="11_ssjsk"]
 
 [node name="AnimationTest" type="Node3D"]
 
@@ -23,7 +24,7 @@ transform = Transform3D(0.104201, 0.00310434, 0.00923946, -0.00309186, 0.10461, 
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0155149, 0.179824, -0.0308623)
 
 [node name="body" parent="pegson_ringmaster" index="0"]
-transform = Transform3D(0.104201, 0.00310434, 0.00923946, -0.00309186, 0.10461, -0.000278054, -0.00924363, 3.88234e-06, 0.104247, 0, 0.123468, 0)
+transform = Transform3D(0.995654, 0.0296623, 0.0882841, -0.0295431, 0.99956, -0.00265683, -0.088324, 3.70953e-05, 0.996092, 0, 0.123468, 0)
 
 [node name="Audience_Member" parent="." instance=ExtResource("3_58yw8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.983098, 0.0740608, -0.0730653)
@@ -46,6 +47,9 @@ transform = Transform3D(1, 0, 2.00234e-08, 1.06404e-07, -5.21541e-08, 1, -2.2351
 [node name="body" parent="stretcher/body/Audience_Member2" index="0"]
 transform = Transform3D(0.104518, 0.00269657, 0.00464563, -0.00266771, 0.10462, -0.000708361, -0.00466226, 0.000589007, 0.104551, 0, 0.123468, 0)
 
+[node name="PegsonEntity" parent="stretcher/body/Audience_Member2" index="3"]
+in_stretcher = true
+
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.0128571, -0.678621, 0.734376, -0.0118791, 0.734488, 0.678517, -0.999847, 9.3118e-10, -0.0175048, 0, 0, 0)
 
@@ -59,7 +63,6 @@ current = true
 camera_attributes = ExtResource("9_csk70")
 
 [node name="Audience" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="Audience_Member" parent="Audience" instance=ExtResource("3_58yw8")]
 transform = Transform3D(1, -1.49012e-08, 3.02589e-09, -1.49012e-08, 1, -4.72937e-11, 3.62866e-09, -4.51109e-10, 1, -8.65078, 0.535127, -7.65158)
@@ -72,6 +75,9 @@ input_name_prefix = "left_light"
 [node name="SpotLight" parent="." instance=ExtResource("10_6oykc")]
 transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, -8.4579, 11.7986, -12.8033)
 camera_node_path = NodePath("../Camera3D")
+
+[node name="audience_manager" type="Node" parent="."]
+script = ExtResource("11_ssjsk")
 
 [editable path="pegson_clown"]
 [editable path="pegson_ringmaster"]

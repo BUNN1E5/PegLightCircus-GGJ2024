@@ -11,7 +11,7 @@ func _ready():
 func _process(delta):
 	pass
 	
-func put_in_stretcher(obj : Node3D):
+func put_in_stretcher(obj : PegsonEntity):
 	obj.reparent(stretcher_node, false)
 	obj.rotation_degrees.x = -90
 	obj.position = Vector3(0, 0.15, 0.5)
