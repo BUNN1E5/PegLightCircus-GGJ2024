@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-const BASE_UNIT_SPEED = 5
+const BASE_UNIT_SPEED = 3
 const ACCELERATION = 10
 const CIRCLE_SIZE = 10
 const STAGE_ENTRANCE_DELAY = 1
@@ -15,20 +15,21 @@ const WANDER_SPEED = 3
 const HEXAGON_SPEED = 2
 const HEXAGON_MOVEMENT_DIAMETER = 4
 const PERFORMANCE_MODES = ["wander", "static", "hexagon"]
+const WALK_ANIMATION_NAME = "pegson_base_animations/walk"
+const IDLE_ANIMATION_NAME = "pegson_base_animations/Idle"
 
-@export var primaryPerformancePointPath: NodePath = ""
-@export var secondaryPerformancePointPath: NodePath = ""
+@export var performancePointPath: NodePath = ""
 @export var entrancePointPath: NodePath = ""
+@export var performanceType = ""
 
 @onready var agent: NavigationAgent3D = $NavigationAgent3D
 @onready var entrancePoint: Marker3D = get_node(entrancePointPath)
-@onready var performancePointA: Marker3D = get_node(primaryPerformancePointPath)
-@onready var performancePointB: Marker3D = get_node(secondaryPerformancePointPath)
+@onready var performancePoint: Marker3D = get_node(performancePointPath)
+@onready var animationPlayer: AnimationPlayer = $pegson_base/AnimationPlayer
 
 var unit_speed = BASE_UNIT_SPEED
 var identifier = 0
 var state = "spawning"
-var performance_type = "static"
 var movements = 0
 
 func _ready():
@@ -59,37 +60,17 @@ func random_inside_unit_circle() -> Vector3:
 
 
 func enterStage():
-	# TODO: pick a performance type based on the performer.
-	performance_type = PERFORMANCE_MODES[randi() % PERFORMANCE_MODES.size()]
-	
 	# delay entrance
 	var delay = randf() * STAGE_ENTRANCE_DELAY
 	print("entering stage in ", delay, " seconds")
 	await get_tree().create_timer(delay).timeout
 	print("entering stage now")
 	state = "entering"
-
-	agent.set_target_position(getPerformancePosition())
+	agent.set_target_position(performancePoint.position)
+	animationPlayer.play(WALK_ANIMATION_NAME)
 	
-func getPerformancePosition():
-	var character_num = get_meta("CharacterNum")
 
-	if character_num == 0: 
-		return performancePointA.position
-	elif character_num == 1:
-		return performancePointB.position
-	else:
-		assert("invalid character number selected")
 
-func exitStage():
-	print("exiting stage")
-	state = "exiting"
-	await get_tree().create_timer(EXIT_STAGE_DELAY).timeout
-	
-	# TODO: show stretcher animation on failure status.
-	agent.set_target_position(entrancePoint.position)
-	unit_speed = BASE_UNIT_SPEED
-	
 func doPerformance():
 	state = "performing"
 	
@@ -97,17 +78,17 @@ func doPerformance():
 	print("getting ready to perform in ", startDelay, " seconds")
 	await get_tree().create_timer(startDelay).timeout
 
-	if performance_type == "static": 
-		# if static performance, don't loop, just stay still for x time.
+
+	if performanceType == "static": 
 		doStaticPerformance()
-	elif performance_type == "wander":
+	elif performanceType == "wander":
 		print("doing wander performance")
 		state = "wandering"
 		movements = TOTAL_WANDER_MOVEMENTS
 		unit_speed = WANDER_SPEED
 		doWandering()
 		
-	elif performance_type == "hexagon":
+	elif performanceType == "hexagon":
 		print("doing hexagon performance")
 		state = "hexagoning"
 		movements = 5
@@ -115,13 +96,16 @@ func doPerformance():
 		doHexagoning()
 		
 	else:
-		assert("invalid performance type specified", performance_type)
+		assert("invalid performance type specified", performanceType)
 
 func doStaticPerformance():
+	# TODO: play specific performance animation
+	animationPlayer.play(IDLE_ANIMATION_NAME)
+	
 	var randomDelay = MINIMUM_PERFORMANCE_TIME + (randf() * MAXIMUM_PERFORMANCE_TIME)
 	print("doing static performance for ", randomDelay, " seconds")
 	await get_tree().create_timer(randomDelay).timeout
-	print("done with dynamic performance")
+	print("done with static performance")
 	
 	exitStage()
 
@@ -137,7 +121,7 @@ func doWandering():
 
 func doHexagoning():
 	if movements >= 0:
-		var vertices = hexagonVertices(getPerformancePosition(), HEXAGON_MOVEMENT_DIAMETER)
+		var vertices = hexagonVertices(performancePoint.position, HEXAGON_MOVEMENT_DIAMETER)
 		var target = vertices[movements]
 		
 		agent.set_target_position(target)
@@ -149,7 +133,33 @@ func doHexagoning():
 
 func finishPerformance():
 	state = "done-performing"
-	agent.set_target_position(getPerformancePosition())	
+	agent.set_target_position(performancePoint.position)	
+
+func exitStage():
+	animationPlayer.play(IDLE_ANIMATION_NAME)
+	
+	print("exiting stage in ", EXIT_STAGE_DELAY, " seconds")
+	state = "exiting"
+	await get_tree().create_timer(EXIT_STAGE_DELAY).timeout
+	
+	# TODO: show stretcher animation on failure status.
+	agent.set_target_position(entrancePoint.position)
+	unit_speed = BASE_UNIT_SPEED
+	animationPlayer.play(WALK_ANIMATION_NAME)
+
+# https://docs.godotengine.org/en/stable/getting_started/step_by_step/signals.html
+func _on_navigation_agent_3d_navigation_finished():
+	print("finished navigation during state: ", state)
+	if state == "entering":
+		doPerformance()
+	elif state == "exiting":
+		enterStage()
+	elif state == "wandering":
+		doWandering()
+	elif state == "hexagoning":
+		doHexagoning()
+	elif state == "done-performing":
+		exitStage()
 
 func hexagonVertices(origin: Vector3, distance: int):
 	# The angles for each vertex of a regular hexagon
@@ -166,17 +176,3 @@ func hexagonVertices(origin: Vector3, distance: int):
 		vertices.append(vertex)
 
 	return vertices
-
-# https://docs.godotengine.org/en/stable/getting_started/step_by_step/signals.html
-func _on_navigation_agent_3d_navigation_finished():
-	print("finished navigation during state: ", state)
-	if state == "entering":
-		doPerformance()
-	elif state == "exiting":
-		enterStage()
-	elif state == "wandering":
-		doWandering()
-	elif state == "hexagoning":
-		doHexagoning()
-	elif state == "done-performing":
-		exitStage()
