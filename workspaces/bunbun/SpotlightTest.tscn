@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://daihumkpag611"]
+
+[ext_resource type="Script" path="res://workspaces/bunbun/spotlight.gd" id="1_kqx6a"]
+[ext_resource type="Environment" uid="uid://dk5cqk6373bwl" path="res://globals/default_enviroment.tres" id="1_yenxp"]
+[ext_resource type="CameraAttributesPhysical" uid="uid://c27pks55vtiyw" path="res://globals/camera_attributes.tres" id="2_hbqte"]
+[ext_resource type="PackedScene" uid="uid://dj4bve2y02nhc" path="res://globals/world_environment.tscn" id="4_j6875"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_nt4py"]
+
+[node name="SpotlightTest" type="Node3D"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.814683, 0.579907, 0, -0.579907, 0.814683, 0, 7.37442, 8.24987)
+environment = ExtResource("1_yenxp")
+attributes = ExtResource("2_hbqte")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(15, 0, 0, 0, 0.25, 0, 0, 0, 15, 0, 0, 0)
+mesh = SubResource("BoxMesh_nt4py")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.63862, 5.05214)
+light_energy = 5.202
+light_volumetric_fog_energy = 16.0
+spot_range = 9.12584
+spot_angle = 9.9223
+script = ExtResource("1_kqx6a")
+
+[node name="Area3D" type="Area3D" parent="SpotLight3D"]
+visible = false
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="SpotLight3D/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
+depth = 10.0
+polygon = PackedVector2Array(-1, -1, 1, -1, 1, 1, -1, 1)
+
+[node name="Marker3D" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.94061, -2.24387, 1.83473)
+
+[node name="WorldEnvironment" parent="." instance=ExtResource("4_j6875")]

@@ -1,9 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://q3nlgpva1vnx"]
+[gd_scene load_steps=4 format=3 uid="uid://q3nlgpva1vnx"]
 
 [ext_resource type="CameraAttributesPhysical" uid="uid://c27pks55vtiyw" path="res://globals/camera_attributes.tres" id="1_frbp1"]
+[ext_resource type="PackedScene" uid="uid://ccx1wtrvrl1vk" path="res://models/Environment/circus_blockout.tscn" id="3_3rcgv"]
+[ext_resource type="PackedScene" uid="uid://dj4bve2y02nhc" path="res://globals/world_environment.tscn" id="3_lcuqb"]
 
 [node name="Node3D" type="Node3D"]
 
 [node name="MainCamera" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.894654, 0.44676, 0, -0.44676, 0.894654, 0, 0.538495, 0.826162)
 attributes = ExtResource("1_frbp1")
+
+[node name="WorldEnvironment" parent="." instance=ExtResource("3_lcuqb")]
+
+[node name="circus_blockout" parent="." instance=ExtResource("3_3rcgv")]

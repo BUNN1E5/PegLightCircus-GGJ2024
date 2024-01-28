@@ -1,0 +1,8 @@
+[gd_resource type="Environment" format=3 uid="uid://dk5cqk6373bwl"]
+
+[resource]
+ambient_light_source = 1
+ssao_enabled = true
+ssao_radius = 2.92
+ssao_intensity = 3.48
+volumetric_fog_enabled = true
