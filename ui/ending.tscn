@@ -1,17 +1,19 @@
-[gd_scene load_steps=15 format=3 uid="uid://4w78e5stdug4"]
+[gd_scene load_steps=17 format=3 uid="uid://4w78e5stdug4"]
 
 [ext_resource type="Script" path="res://ui/ending.gd" id="1_03wr4"]
 [ext_resource type="FontFile" uid="uid://w2tsh7trb72s" path="res://ui/fonts/Headlinetext.ttf" id="1_qe0lp"]
 [ext_resource type="FontFile" uid="uid://bybflb60413wb" path="res://ui/fonts/Cardo-Regular.ttf" id="2_vh43d"]
 [ext_resource type="Texture2D" uid="uid://c66qclilfeexh" path="res://ui/bad_ending_image_1.png" id="3_26vvf"]
-[ext_resource type="FontFile" uid="uid://uo2b1p030y4j" path="res://ui/fonts/Cardo-Bold.ttf" id="4_p7x1f"]
+[ext_resource type="FontFile" uid="uid://h374flg1su4d" path="res://ui/fonts/Cardo-Bold.ttf" id="4_p7x1f"]
+[ext_resource type="Texture2D" uid="uid://0ywhfo420jpy" path="res://ui/good_ending_image.png" id="5_610xy"]
 [ext_resource type="Texture2D" uid="uid://fiqliec7addr" path="res://ui/bad_ending_image_1_color.png" id="5_ksx2q"]
+[ext_resource type="Texture2D" uid="uid://cn3q1fcd8i3pk" path="res://ui/good_ending_image_1_color.png" id="7_ecmst"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lj6q2"]
 bg_color = Color(0.717647, 0.717647, 0.717647, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wdbmp"]
-bg_color = Color(0.694118, 0.0980392, 0.0784314, 1)
+bg_color = Color(0.278431, 0.427451, 0.0431373, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lmw7n"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -41,7 +43,7 @@ grow_vertical = 2
 script = ExtResource("1_03wr4")
 metadata/success = true
 
-[node name="Panel" type="Panel" parent="."]
+[node name="NewspaperPanel" type="Panel" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -54,15 +56,30 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_lj6q2")
 
-[node name="Panel" type="Panel" parent="Panel"]
+[node name="GreenColoredPanel" type="Panel" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -252.0
-offset_top = -107.0
-offset_right = -642.0
-offset_bottom = -344.0
+offset_left = -246.0
+offset_top = -93.0
+offset_right = -540.0
+offset_bottom = -298.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.404859
+theme_override_styles/panel = SubResource("StyleBoxFlat_wdbmp")
+
+[node name="RedColoredPanel" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -269.0
+offset_top = -120.0
+offset_right = -659.0
+offset_bottom = -357.0
 grow_horizontal = 2
 grow_vertical = 2
 rotation = -0.405999
@@ -73,19 +90,20 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -7.0
-offset_top = 361.0
-offset_right = -200.0
-offset_bottom = -177.0
+offset_left = -13.0
+offset_top = 350.0
+offset_right = -206.0
+offset_bottom = -188.0
 grow_horizontal = 2
 grow_vertical = 2
-rotation = -0.409313
+rotation = -0.405383
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_qe0lp")
 theme_override_font_sizes/font_size = 90
 text = "PEGSONVILLE NEWS"
 
 [node name="Date" type="Label" parent="."]
+layout_mode = 0
 offset_left = -1.99999
 offset_top = 476.0
 offset_right = 493.0
@@ -96,14 +114,6 @@ theme_override_fonts/font = ExtResource("2_vh43d")
 theme_override_font_sizes/font_size = 18
 text = "Sunday, January 28th, 2024
 "
-
-[node name="Line2D" type="Line2D" parent="."]
-position = Vector2(-155.796, 66.0307)
-rotation = 0.00198872
-scale = Vector2(1.29786, 1.26895)
-points = PackedVector2Array(132, 339, 419.816, 212.167, 1046.12, -63.8308)
-width = 1.0
-default_color = Color(0.384314, 0.384314, 0.384314, 0.784314)
 
 [node name="Subtitle" type="Label" parent="."]
 layout_mode = 0
@@ -117,10 +127,19 @@ theme_override_fonts/font = ExtResource("2_vh43d")
 theme_override_font_sizes/font_size = 18
 text = "A totally real newspaper you can pickup at your local liquor store"
 
+[node name="Line2D" type="Line2D" parent="."]
+position = Vector2(-155.796, 66.0307)
+rotation = 0.00198872
+scale = Vector2(1.29786, 1.26895)
+points = PackedVector2Array(132, 339, 419.816, 212.167, 1046.12, -63.8308)
+width = 1.0
+default_color = Color(0.384314, 0.384314, 0.384314, 0.784314)
+
 [node name="Header" type="Label" parent="."]
+layout_mode = 0
 offset_left = 467.0
 offset_top = 316.0
-offset_right = 1112.0
+offset_right = 1369.0
 offset_bottom = 374.0
 rotation = -0.400183
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -158,7 +177,28 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_lmw7n")
 theme_override_styles/focus = SubResource("StyleBoxFlat_f8keo")
 text = "Play Again?"
 
-[node name="ImageButton" type="Button" parent="."]
+[node name="GoodEndingClipping" type="Button" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.002
+anchor_top = 1.005
+anchor_right = 0.002
+anchor_bottom = 1.005
+offset_left = -51.304
+offset_top = -108.24
+offset_right = 479.696
+offset_bottom = 370.76
+rotation = -0.390215
+
+[node name="GoodEndingImage1" type="Sprite2D" parent="GoodEndingClipping"]
+position = Vector2(264.35, 244.309)
+rotation = 0.00676674
+scale = Vector2(0.65887, 0.65887)
+texture = ExtResource("5_610xy")
+
+[node name="BadEndingClipping" type="Button" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.002
@@ -171,13 +211,33 @@ offset_right = 481.696
 offset_bottom = 365.76
 rotation = -0.390215
 
-[node name="BadEndingImage1" type="Sprite2D" parent="ImageButton"]
+[node name="BadEndingImage1" type="Sprite2D" parent="BadEndingClipping"]
 position = Vector2(266.047, 245.106)
 rotation = -0.00718305
 scale = Vector2(0.659043, 0.658037)
 texture = ExtResource("3_26vvf")
 
-[node name="BadEndingImage" type="Button" parent="."]
+[node name="GoodEndingModal" type="Button" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.999
+anchor_bottom = 0.989
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 32.152
+offset_bottom = 26.128
+theme_override_styles/normal = SubResource("StyleBoxFlat_r3g57")
+theme_override_styles/hover = SubResource("StyleBoxFlat_q1q4k")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jp3c6")
+theme_override_styles/focus = SubResource("StyleBoxFlat_it3vk")
+
+[node name="GoodEndingImage1Color" type="Sprite2D" parent="GoodEndingModal"]
+position = Vector2(627, 349)
+scale = Vector2(0.646309, 0.646309)
+texture = ExtResource("7_ecmst")
+
+[node name="BadEndingModal" type="Button" parent="."]
 visible = false
 layout_mode = 1
 anchors_preset = -1
@@ -192,11 +252,13 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_q1q4k")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_jp3c6")
 theme_override_styles/focus = SubResource("StyleBoxFlat_it3vk")
 
-[node name="BadEndingImage1Color" type="Sprite2D" parent="BadEndingImage"]
+[node name="BadEndingImage1Color" type="Sprite2D" parent="BadEndingModal"]
 position = Vector2(620, 346)
 scale = Vector2(0.682505, 0.736409)
 texture = ExtResource("5_ksx2q")
 
 [connection signal="pressed" from="PlayAgainButton" to="." method="_on_play_again_button_pressed"]
-[connection signal="pressed" from="ImageButton" to="." method="_on_image_button_pressed"]
-[connection signal="pressed" from="BadEndingImage" to="." method="_on_bad_ending_image_pressed"]
+[connection signal="pressed" from="GoodEndingClipping" to="." method="_on_good_ending_clipping_pressed"]
+[connection signal="pressed" from="BadEndingClipping" to="." method="_on_bad_ending_clipping_pressed"]
+[connection signal="pressed" from="GoodEndingModal" to="." method="_on_good_ending_modal_pressed"]
+[connection signal="pressed" from="BadEndingModal" to="." method="_on_bad_ending_modal_pressed"]
