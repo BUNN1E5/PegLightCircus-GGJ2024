@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cj3whic476r0o"
+path="res://.godot/imported/weewoo.wav-2fa8212f9a2f92551ccd2deb0910a8e2.sample"
+
+[deps]
+
+source_file="res://audio/ambulance siren/weewoo.wav"
+dest_files=["res://.godot/imported/weewoo.wav-2fa8212f9a2f92551ccd2deb0910a8e2.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
