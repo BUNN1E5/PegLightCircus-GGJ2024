@@ -1,8 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://cmws2ypm1r58f"]
+[gd_scene load_steps=8 format=3 uid="uid://cqqqf8abfey2s"]
 
 [ext_resource type="Script" path="res://ui/controls.gd" id="1_5opxo"]
-[ext_resource type="Theme" uid="uid://bwkh88618xc5e" path="res://ui/text_theme.tres" id="1_bcfts"]
-[ext_resource type="StyleBox" uid="uid://dek8lefyto840" path="res://ui/white_box.tres" id="2_37fa8"]
+[ext_resource type="Theme" uid="uid://b1nned5wlbfky" path="res://ui/text_theme.tres" id="1_bcfts"]
+[ext_resource type="StyleBox" uid="uid://cknabv001mw6u" path="res://ui/white_box.tres" id="2_37fa8"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4w4si"]
 bg_color = Color(0, 0, 0, 1)

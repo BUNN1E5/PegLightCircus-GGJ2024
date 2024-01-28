@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://dq84h37cj0avl"]
+[gd_scene load_steps=8 format=3 uid="uid://dq84h37cj0avl"]
 
 [ext_resource type="Script" path="res://ui/main_menu.gd" id="1_hdxst"]
-[ext_resource type="FontFile" uid="uid://csxgko4334q6k" path="res://ui/font/SpanishCircus.otf" id="1_natb1"]
+[ext_resource type="FontFile" uid="uid://bl28gg1u5smqo" path="res://ui/fonts/SpanishCircus.otf" id="2_8kcvf"]
+[ext_resource type="FontFile" uid="uid://c0ney16b7ni64" path="res://ui/fonts/SpanishCircus.ttf" id="3_yb402"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pvat4"]
 
@@ -28,7 +29,7 @@ offset_right = 283.0
 offset_bottom = 314.0
 rotation = -0.451855
 theme_override_colors/font_color = Color(0.847059, 0.0901961, 0.0901961, 1)
-theme_override_fonts/font = ExtResource("1_natb1")
+theme_override_fonts/font = ExtResource("2_8kcvf")
 theme_override_font_sizes/font_size = 108
 text = "Peg"
 horizontal_alignment = 1
@@ -41,7 +42,7 @@ offset_top = 71.0
 offset_right = 686.0
 offset_bottom = 185.0
 theme_override_colors/font_color = Color(1, 0.964706, 0.254902, 1)
-theme_override_fonts/font = ExtResource("1_natb1")
+theme_override_fonts/font = ExtResource("2_8kcvf")
 theme_override_font_sizes/font_size = 108
 text = "Light"
 horizontal_alignment = 1
@@ -55,7 +56,7 @@ offset_right = 557.0
 offset_bottom = 374.0
 rotation = -0.225335
 theme_override_colors/font_color = Color(0.207843, 0.690196, 0.741176, 1)
-theme_override_fonts/font = ExtResource("1_natb1")
+theme_override_fonts/font = ExtResource("3_yb402")
 theme_override_font_sizes/font_size = 108
 text = "Circus"
 horizontal_alignment = 1
@@ -82,7 +83,7 @@ theme_override_colors/font_color = Color(0.956863, 0.494118, 0.4, 1)
 theme_override_colors/font_pressed_color = Color(0.7, 0.343, 0.28, 1)
 theme_override_colors/font_hover_color = Color(0.8, 0.392, 0.32, 1)
 theme_override_colors/font_focus_color = Color(0.933333, 0.458824, 0.376471, 1)
-theme_override_fonts/font = ExtResource("1_natb1")
+theme_override_fonts/font = ExtResource("3_yb402")
 theme_override_font_sizes/font_size = 84
 theme_override_styles/normal = SubResource("StyleBoxEmpty_pvat4")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_dxs2b")
@@ -96,7 +97,7 @@ theme_override_colors/font_color = Color(0.956863, 0.494118, 0.4, 1)
 theme_override_colors/font_pressed_color = Color(0.7, 0.343, 0.28, 1)
 theme_override_colors/font_hover_color = Color(0.8, 0.392, 0.32, 1)
 theme_override_colors/font_focus_color = Color(0.933333, 0.458824, 0.376471, 1)
-theme_override_fonts/font = ExtResource("1_natb1")
+theme_override_fonts/font = ExtResource("3_yb402")
 theme_override_font_sizes/font_size = 52
 theme_override_styles/normal = SubResource("StyleBoxEmpty_pvat4")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_dxs2b")

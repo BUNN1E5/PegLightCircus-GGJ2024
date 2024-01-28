@@ -2,6 +2,9 @@ extends Control
 
 
 @onready var badEndingImage: Button = $BadEndingImage
+@onready var date: Label = $Date
+@onready var header: Label = $Header
+@onready var body: Label = $Body
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
