@@ -1,3 +1,22 @@
-[gd_scene format=3 uid="uid://b07402km0sb7a"]
+[gd_scene load_steps=2 format=3 uid="uid://b07402km0sb7a"]
+
+[ext_resource type="PackedScene" uid="uid://dlopfs386db8w" path="res://models/environment/circus_enviornment.tscn" id="1_j6k5p"]
 
 [node name="AudienceSpawn" type="Node3D"]
+
+[node name="circus_Enviorment" parent="." instance=ExtResource("1_j6k5p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0406786, 1.19209e-07, -0.210784)
+
+[node name="AudienceSpawnPoints" type="Node3D" parent="."]
+
+[node name="0" type="Node3D" parent="AudienceSpawnPoints"]
+transform = Transform3D(0.970296, 0, 0.241922, 0, 1, 0, -0.241922, 0, 0.970296, -0.0406786, 1.19209e-07, -0.210784)
+
+[node name="top" type="Marker3D" parent="AudienceSpawnPoints/0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9895, 1.71089, -6.25849e-07)
+
+[node name="middle" type="Marker3D" parent="AudienceSpawnPoints/0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2108, 1.08069, 8.9407e-08)
+
+[node name="bottom" type="Marker3D" parent="AudienceSpawnPoints/0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4183, 0.471175, 8.9407e-08)
