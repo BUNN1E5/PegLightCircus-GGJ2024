@@ -1,4 +1,17 @@
-[gd_scene format=3 uid="uid://cmws2ypm1r58f"]
+[gd_scene load_steps=5 format=3 uid="uid://cmws2ypm1r58f"]
+
+[ext_resource type="Theme" uid="uid://bwkh88618xc5e" path="res://ui/text_theme.tres" id="1_bcfts"]
+[ext_resource type="StyleBox" uid="uid://dek8lefyto840" path="res://ui/white_box.tres" id="2_37fa8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4w4si"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Theme" id="Theme_m36ly"]
 
 [node name="Controls" type="Control"]
 layout_mode = 3
@@ -7,3 +20,315 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 254.0
+offset_top = -1.0
+offset_right = -251.0
+offset_bottom = -2.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_bcfts")
+theme_override_colors/font_color = Color(0, 0.0666667, 0.607843, 1)
+text = "Controls
+"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="200" type="Label" parent="VBoxContainer"]
+custom_minimum_size = Vector2(200, 2.08165e-12)
+layout_mode = 2
+theme = ExtResource("1_bcfts")
+theme_override_colors/font_color = Color(1, 0.992157, 0.247059, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/shadow_outline_size = 4
+theme_override_constants/line_spacing = 0
+theme_override_font_sizes/font_size = 48
+text = "Move
+Spotlights"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="HSeparator2" type="HSeparator" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 218
+
+[node name="Label3" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_bcfts")
+theme_override_colors/font_color = Color(0.137255, 0.00392157, 0.00392157, 1)
+theme_override_font_sizes/font_size = 48
+text = "Kill 
+Lights"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_right = -1.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 150
+alignment = 1
+
+[node name="Left" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 100
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/Left"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/Left/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_4w4si")
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/Left/VBoxContainer/PanelContainer"]
+layout_mode = 2
+theme = SubResource("Theme_m36ly")
+theme_override_styles/panel = ExtResource("2_37fa8")
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/Left/VBoxContainer/PanelContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+
+[node name="Letter" type="Label" parent="HBoxContainer/Left/VBoxContainer/PanelContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme = ExtResource("1_bcfts")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "W"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Left/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="PanelContainer2" type="PanelContainer" parent="HBoxContainer/Left/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_4w4si")
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/Left/VBoxContainer/HBoxContainer/PanelContainer2"]
+layout_mode = 2
+theme = SubResource("Theme_m36ly")
+theme_override_styles/panel = ExtResource("2_37fa8")
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/Left/VBoxContainer/HBoxContainer/PanelContainer2/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 24
+
+[node name="Letter" type="Label" parent="HBoxContainer/Left/VBoxContainer/HBoxContainer/PanelContainer2/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme = ExtResource("1_bcfts")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "A"
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/Left/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_4w4si")
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/Left/VBoxContainer/HBoxContainer/PanelContainer"]
+layout_mode = 2
+theme = SubResource("Theme_m36ly")
+theme_override_styles/panel = ExtResource("2_37fa8")
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/Left/VBoxContainer/HBoxContainer/PanelContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 26
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 26
+
+[node name="Letter" type="Label" parent="HBoxContainer/Left/VBoxContainer/HBoxContainer/PanelContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme = ExtResource("1_bcfts")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "S"
+
+[node name="PanelContainer3" type="PanelContainer" parent="HBoxContainer/Left/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_4w4si")
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/Left/VBoxContainer/HBoxContainer/PanelContainer3"]
+layout_mode = 2
+theme = SubResource("Theme_m36ly")
+theme_override_styles/panel = ExtResource("2_37fa8")
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/Left/VBoxContainer/HBoxContainer/PanelContainer3/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 16
+
+[node name="Letter" type="Label" parent="HBoxContainer/Left/VBoxContainer/HBoxContainer/PanelContainer3/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme = ExtResource("1_bcfts")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "D"
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/Left"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_4w4si")
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/Left/PanelContainer"]
+layout_mode = 2
+theme = SubResource("Theme_m36ly")
+theme_override_styles/panel = ExtResource("2_37fa8")
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/Left/PanelContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+
+[node name="Letter" type="Label" parent="HBoxContainer/Left/PanelContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme = ExtResource("1_bcfts")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "SHIFT"
+
+[node name="VSeparator" type="VSeparator" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="Right" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 100
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/Right"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/Right/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_4w4si")
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/Right/VBoxContainer/PanelContainer"]
+layout_mode = 2
+theme = SubResource("Theme_m36ly")
+theme_override_styles/panel = ExtResource("2_37fa8")
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/Right/VBoxContainer/PanelContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 20
+
+[node name="Letter" type="Label" parent="HBoxContainer/Right/VBoxContainer/PanelContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme = ExtResource("1_bcfts")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "O"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Right/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="PanelContainer2" type="PanelContainer" parent="HBoxContainer/Right/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_4w4si")
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/Right/VBoxContainer/HBoxContainer/PanelContainer2"]
+layout_mode = 2
+theme = SubResource("Theme_m36ly")
+theme_override_styles/panel = ExtResource("2_37fa8")
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/Right/VBoxContainer/HBoxContainer/PanelContainer2/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 18
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 18
+
+[node name="Letter" type="Label" parent="HBoxContainer/Right/VBoxContainer/HBoxContainer/PanelContainer2/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme = ExtResource("1_bcfts")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "K"
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/Right/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_4w4si")
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/Right/VBoxContainer/HBoxContainer/PanelContainer"]
+layout_mode = 2
+theme = SubResource("Theme_m36ly")
+theme_override_styles/panel = ExtResource("2_37fa8")
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/Right/VBoxContainer/HBoxContainer/PanelContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 26
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 26
+
+[node name="Letter" type="Label" parent="HBoxContainer/Right/VBoxContainer/HBoxContainer/PanelContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme = ExtResource("1_bcfts")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "L"
+
+[node name="PanelContainer3" type="PanelContainer" parent="HBoxContainer/Right/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_4w4si")
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/Right/VBoxContainer/HBoxContainer/PanelContainer3"]
+layout_mode = 2
+theme = SubResource("Theme_m36ly")
+theme_override_styles/panel = ExtResource("2_37fa8")
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/Right/VBoxContainer/HBoxContainer/PanelContainer3/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 16
+
+[node name="Letter" type="Label" parent="HBoxContainer/Right/VBoxContainer/HBoxContainer/PanelContainer3/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme = ExtResource("1_bcfts")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "; :"
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/Right"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_4w4si")
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/Right/PanelContainer"]
+layout_mode = 2
+theme = SubResource("Theme_m36ly")
+theme_override_styles/panel = ExtResource("2_37fa8")
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/Right/PanelContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+
+[node name="Letter" type="Label" parent="HBoxContainer/Right/PanelContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme = ExtResource("1_bcfts")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "SHIFT"
