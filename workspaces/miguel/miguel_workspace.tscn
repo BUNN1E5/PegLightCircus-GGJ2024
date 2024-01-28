@@ -72,14 +72,14 @@ shape = SubResource("CylinderShape3D_lbe3c")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.095, 1, 15.5)
 performancePointPath = NodePath("../../Targets/PerformancePointA")
 entrancePointPath = NodePath("../../Targets/Entrance")
-performanceType = "hexagon"
+performanceType = 2
 metadata/CharacterNum = 0
 
 [node name="PrimaryCharacter3" parent="NavigationRegion3D" instance=ExtResource("1_iuusa")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 1, 15)
 performancePointPath = NodePath("../../Targets/PerformancePointB")
 entrancePointPath = NodePath("../../Targets/Entrance")
-performanceType = "wander"
+performanceType = 2
 metadata/CharacterNum = 1
 
 [node name="Camera3D" type="Camera3D" parent="."]
