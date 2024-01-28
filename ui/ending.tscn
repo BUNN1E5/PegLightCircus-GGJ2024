@@ -1,10 +1,10 @@
-[gd_scene load_steps=14 format=3 uid="uid://cxunels6ylmo6"]
+[gd_scene load_steps=14 format=3 uid="uid://buxk3y0dnnq5e"]
 
 [ext_resource type="Script" path="res://ui/ending.gd" id="1_03wr4"]
-[ext_resource type="FontFile" uid="uid://basouxc5fspsr" path="res://ui/fonts/Headlinetext.ttf" id="1_qe0lp"]
-[ext_resource type="FontFile" uid="uid://cr4nspjnp5qbg" path="res://ui/fonts/Cardo-Regular.ttf" id="2_vh43d"]
-[ext_resource type="Texture2D" uid="uid://xpta7aha7vly" path="res://ui/bad_ending_image_1.png" id="3_26vvf"]
-[ext_resource type="Texture2D" uid="uid://bwrq11dh8dmwj" path="res://ui/bad_ending_image_1_color.png" id="5_ksx2q"]
+[ext_resource type="FontFile" uid="uid://c5cmie8vxq5yp" path="res://ui/fonts/Headlinetext.ttf" id="1_qe0lp"]
+[ext_resource type="FontFile" uid="uid://djd5ryhkde34s" path="res://ui/fonts/Cardo-Regular.ttf" id="2_vh43d"]
+[ext_resource type="Texture2D" uid="uid://b3dn8u8i6iwvc" path="res://ui/bad_ending_image_1.png" id="3_26vvf"]
+[ext_resource type="Texture2D" uid="uid://d0wbnlum1ntr1" path="res://ui/bad_ending_image_1_color.png" id="5_ksx2q"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lj6q2"]
 bg_color = Color(0.717647, 0.717647, 0.717647, 1)
