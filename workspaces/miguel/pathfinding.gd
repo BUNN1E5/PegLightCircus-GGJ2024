@@ -32,6 +32,7 @@ enum PERFORMANCE_TYPES { STATIC, WANDER, HEXAGON }
 @onready var entryApplause: AudioStreamPlayer = get_node(entryApplauseSoundPath)
 @onready var entrancePoint: Marker3D = get_node(entrancePointPath)
 @onready var performancePoint: Marker3D = get_node(performancePointPath)
+@onready var mainMenuStartButton: Button = get_node("/root/Node3D/Menu/MainMenu/VBoxContainer/Start Button")
 
 @onready var clownPegson: Node3D = $pegson_clown
 @onready var clownAnimationPlayer: AnimationPlayer = $pegson_clown/AnimationPlayer
@@ -42,7 +43,7 @@ var state = "spawning"
 var movements = 0
 
 func _ready():
-	call_deferred("actor_setup")
+	mainMenuStartButton.pressed.connect(actor_setup)
 	
 func actor_setup():
 	await get_tree().physics_frame
