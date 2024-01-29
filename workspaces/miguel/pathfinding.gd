@@ -3,7 +3,7 @@ extends CharacterBody3D
 const BASE_UNIT_SPEED = 3
 const ACCELERATION = 10
 const CIRCLE_SIZE = 10
-const STAGE_ENTRANCE_DELAY = 1
+const STAGE_ENTRANCE_DELAY = 3
 const MINIMUM_PERFORMANCE_TIME = 5
 const MAXIMUM_PERFORMANCE_TIME = 5
 const PERFORMANCE_STARTUP_TIME = 5
@@ -24,10 +24,12 @@ enum PERFORMANCE_TYPES { STATIC, WANDER, HEXAGON }
 
 @export var performancePointPath: NodePath = ""
 @export var entrancePointPath: NodePath = ""
+@export var entryApplauseSoundPath: NodePath = ""
 @export var performanceType: PERFORMANCE_TYPES
 
 @onready var agent: NavigationAgent3D = $NavigationAgent3D
 @onready var balanceBall: Node3D = $BalanceBall
+@onready var entryApplause: AudioStreamPlayer = get_node(entryApplauseSoundPath)
 @onready var entrancePoint: Marker3D = get_node(entrancePointPath)
 @onready var performancePoint: Marker3D = get_node(performancePointPath)
 
@@ -77,8 +79,7 @@ func enterStage():
 	agent.set_target_position(performancePoint.position)
 	clownAnimationPlayer.stop()
 	clownAnimationPlayer.play(CLOWN_WALK_ANIMATION_NAME)
-	
-
+	playApplause()
 
 func doPerformance():
 	state = "performing"
@@ -89,7 +90,6 @@ func doPerformance():
 	var startDelay = PERFORMANCE_STARTUP_TIME
 	#print("getting ready to perform in ", startDelay, " seconds")
 	await get_tree().create_timer(startDelay).timeout
-
 
 	clownAnimationPlayer.stop()
 	clownAnimationPlayer.play(PERFORMANCE_ANIMATION_NAME)
@@ -190,3 +190,17 @@ func hexagonVertices(origin: Vector3, distance: int):
 func animationFinished(name):
 	if name == START_PERFORMANCE_ANIMATION_NAME:
 		balanceBall.visible = !balanceBall.visible
+
+func playApplause():
+	if entryApplause.playing:
+		# do nothing.
+		return
+	else:
+		entryApplause.play()
+		
+func stopApplause():
+	if entryApplause.playing:
+		entryApplause.stop()
+	else:
+		# do nothing
+		return
