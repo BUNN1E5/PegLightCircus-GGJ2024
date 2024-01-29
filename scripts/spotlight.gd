@@ -72,7 +72,7 @@ func _input(event):
 
 
 func _on_enter_spotlight(body : Node3D):
-	#TODO :: body.connect("function name", 
+	
 	pass
 
 func _on_exit_spotlight(body : Node3D):

@@ -24,10 +24,10 @@ smooth_value = 30.0
 input_ray_pickable = false
 
 [node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -15)
-depth = -30.0
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -25)
+depth = 50.0
 disabled = true
-polygon = PackedVector2Array(-1, -1, 1, -1, 1, 1, -1, 1)
+polygon = PackedVector2Array(-2, -2, 2, -2, 2, 2, -2, 2)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -3.8147e-06, -1, 0, 20, -2.98023e-08, 0, 9.53674e-07, -20)

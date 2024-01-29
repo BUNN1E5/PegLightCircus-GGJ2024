@@ -1,16 +1,22 @@
-[gd_scene load_steps=2 format=3 uid="uid://b07402km0sb7a"]
+[gd_scene load_steps=9 format=3 uid="uid://b07402km0sb7a"]
 
-[ext_resource type="PackedScene" uid="uid://dlopfs386db8w" path="res://models/environment/circus_enviornment.tscn" id="1_j6k5p"]
+[ext_resource type="Script" path="res://workspaces/bunbun/AudienceSpawner.gd" id="1_575dy"]
+[ext_resource type="PackedScene" uid="uid://4l30ijkcswfi" path="res://models/pegson/audience_member/audience_member.tscn" id="2_5wnhb"]
+[ext_resource type="PackedScene" uid="uid://dlrsnnpwtfug1" path="res://models/pegson/audience_member_2/audience_member_2.tscn" id="3_fjiiv"]
+[ext_resource type="PackedScene" uid="uid://cd3nc5gd6wn4a" path="res://models/pegson/clown/pegson_clown.tscn" id="4_oy6h2"]
+[ext_resource type="PackedScene" uid="uid://du6xs6fqxnpyk" path="res://models/pegson/contor/pegson_contor.tscn" id="5_a1ki6"]
+[ext_resource type="PackedScene" uid="uid://dvnhtjq5k2gpt" path="res://models/pegson/ringmaster/pegson_ringmaster.tscn" id="6_27q0l"]
+[ext_resource type="PackedScene" uid="uid://cf5ccnijldjl1" path="res://models/pegson/lion/pegsonlion.tscn" id="6_ka1a3"]
+[ext_resource type="PackedScene" uid="uid://cji7j5w2xx70" path="res://models/pegson/strong/pegson_strong.tscn" id="8_fmv65"]
 
 [node name="AudienceSpawn" type="Node3D"]
-
-[node name="circus_Enviorment" parent="." instance=ExtResource("1_j6k5p")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0406786, 1.19209e-07, -0.210784)
+script = ExtResource("1_575dy")
+possible_audience = Array[PackedScene]([ExtResource("2_5wnhb"), ExtResource("3_fjiiv"), ExtResource("4_oy6h2"), ExtResource("5_a1ki6"), ExtResource("6_ka1a3"), ExtResource("6_27q0l"), ExtResource("8_fmv65")])
 
 [node name="AudienceSpawnPoints" type="Node3D" parent="."]
 
 [node name="0" type="Node3D" parent="AudienceSpawnPoints"]
-transform = Transform3D(0.970296, 0, 0.241922, 0, 1, 0, -0.241922, 0, 0.970296, -0.0406786, 1.19209e-07, -0.210784)
+transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, 0, 0, 0)
 
 [node name="top" type="Marker3D" parent="AudienceSpawnPoints/0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9895, 1.71089, -6.25849e-07)
@@ -19,4 +25,673 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9895, 1.71089, -6.25849e-0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2108, 1.08069, 8.9407e-08)
 
 [node name="bottom" type="Marker3D" parent="AudienceSpawnPoints/0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4183, 0.471175, 8.9407e-08)
+
+[node name="1" type="Node3D" parent="AudienceSpawnPoints"]
+transform = Transform3D(0.939693, 0, 0.34202, 0, 1, 0, -0.34202, 0, 0.939693, 0, 0, 0)
+
+[node name="top" type="Marker3D" parent="AudienceSpawnPoints/1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9895, 1.71089, -6.25849e-07)
+
+[node name="middle" type="Marker3D" parent="AudienceSpawnPoints/1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2108, 1.08069, 8.9407e-08)
+
+[node name="bottom" type="Marker3D" parent="AudienceSpawnPoints/1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4183, 0.471175, 8.9407e-08)
+
+[node name="2" type="Node3D" parent="AudienceSpawnPoints"]
+transform = Transform3D(0.906308, 0, 0.422618, 0, 1, 0, -0.422618, 0, 0.906308, 0, 0, 0)
+
+[node name="top" type="Marker3D" parent="AudienceSpawnPoints/2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9895, 1.71089, -6.25849e-07)
+
+[node name="middle" type="Marker3D" parent="AudienceSpawnPoints/2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2108, 1.08069, 8.9407e-08)
+
+[node name="bottom" type="Marker3D" parent="AudienceSpawnPoints/2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4183, 0.471175, 8.9407e-08)
+
+[node name="3" type="Node3D" parent="AudienceSpawnPoints"]
+transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, 0, 0, 0)
+
+[node name="top" type="Marker3D" parent="AudienceSpawnPoints/3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9895, 1.71089, -6.25849e-07)
+
+[node name="middle" type="Marker3D" parent="AudienceSpawnPoints/3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2108, 1.08069, 8.9407e-08)
+
+[node name="bottom" type="Marker3D" parent="AudienceSpawnPoints/3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4183, 0.471175, 8.9407e-08)
+
+[node name="4" type="Node3D" parent="AudienceSpawnPoints"]
+transform = Transform3D(0.819152, 0, 0.573576, 0, 1, 0, -0.573576, 0, 0.819152, 0, 0, 0)
+
+[node name="top" type="Marker3D" parent="AudienceSpawnPoints/4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9895, 1.71089, -6.25849e-07)
+
+[node name="middle" type="Marker3D" parent="AudienceSpawnPoints/4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2108, 1.08069, 8.9407e-08)
+
+[node name="bottom" type="Marker3D" parent="AudienceSpawnPoints/4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4183, 0.471175, 8.9407e-08)
+
+[node name="5" type="Node3D" parent="AudienceSpawnPoints"]
+transform = Transform3D(0.766044, 0, 0.642788, 0, 1, 0, -0.642788, 0, 0.766044, 0, 0, 0)
+
+[node name="top" type="Marker3D" parent="AudienceSpawnPoints/5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9895, 1.71089, -6.25849e-07)
+
+[node name="middle" type="Marker3D" parent="AudienceSpawnPoints/5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2108, 1.08069, 8.9407e-08)
+
+[node name="bottom" type="Marker3D" parent="AudienceSpawnPoints/5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4183, 0.471175, 8.9407e-08)
+
+[node name="6" type="Node3D" parent="AudienceSpawnPoints"]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0, 0, 0)
+
+[node name="top" type="Marker3D" parent="AudienceSpawnPoints/6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9895, 1.71089, -6.25849e-07)
+
+[node name="middle" type="Marker3D" parent="AudienceSpawnPoints/6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2108, 1.08069, 8.9407e-08)
+
+[node name="bottom" type="Marker3D" parent="AudienceSpawnPoints/6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4183, 0.471175, 8.9407e-08)
+
+[node name="7" type="Node3D" parent="AudienceSpawnPoints"]
+transform = Transform3D(0.642788, 0, 0.766044, 0, 1, 0, -0.766044, 0, 0.642788, 0, 0, 0)
+
+[node name="top" type="Marker3D" parent="AudienceSpawnPoints/7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9895, 1.71089, -6.25849e-07)
+
+[node name="middle" type="Marker3D" parent="AudienceSpawnPoints/7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2108, 1.08069, 8.9407e-08)
+
+[node name="bottom" type="Marker3D" parent="AudienceSpawnPoints/7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4183, 0.471175, 8.9407e-08)
+
+[node name="8" type="Node3D" parent="AudienceSpawnPoints"]
+transform = Transform3D(0.573576, 0, 0.819152, 0, 1, 0, -0.819152, 0, 0.573576, 0, 0, 0)
+
+[node name="top" type="Marker3D" parent="AudienceSpawnPoints/8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9895, 1.71089, -6.25849e-07)
+
+[node name="middle" type="Marker3D" parent="AudienceSpawnPoints/8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2108, 1.08069, 8.9407e-08)
+
+[node name="bottom" type="Marker3D" parent="AudienceSpawnPoints/8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4183, 0.471175, 8.9407e-08)
+
+[node name="9" type="Node3D" parent="AudienceSpawnPoints"]
+transform = Transform3D(0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, 0.5, 0, 0, 0)
+
+[node name="top" type="Marker3D" parent="AudienceSpawnPoints/9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9895, 1.71089, -6.25849e-07)
+
+[node name="middle" type="Marker3D" parent="AudienceSpawnPoints/9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2108, 1.08069, 8.9407e-08)
+
+[node name="bottom" type="Marker3D" parent="AudienceSpawnPoints/9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4183, 0.471175, 8.9407e-08)
+
+[node name="10" type="Node3D" parent="AudienceSpawnPoints"]
+transform = Transform3D(0.422618, 0, 0.906308, 0, 1, 0, -0.906308, 0, 0.422618, 0, 0, 0)
+
+[node name="top" type="Marker3D" parent="AudienceSpawnPoints/10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9895, 1.71089, -6.25849e-07)
+
+[node name="middle" type="Marker3D" parent="AudienceSpawnPoints/10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2108, 1.08069, 8.9407e-08)
+
+[node name="bottom" type="Marker3D" parent="AudienceSpawnPoints/10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4183, 0.471175, 8.9407e-08)
+
+[node name="11" type="Node3D" parent="AudienceSpawnPoints"]
+transform = Transform3D(0.34202, 0, 0.939693, 0, 1, 0, -0.939693, 0, 0.34202, 0, 0, 0)
+
+[node name="top" type="Marker3D" parent="AudienceSpawnPoints/11"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9895, 1.71089, -6.25849e-07)
+
+[node name="middle" type="Marker3D" parent="AudienceSpawnPoints/11"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2108, 1.08069, 8.9407e-08)
+
+[node name="bottom" type="Marker3D" parent="AudienceSpawnPoints/11"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4183, 0.471175, 8.9407e-08)
+
+[node name="12" type="Node3D" parent="AudienceSpawnPoints"]
+transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, 0, 0, 0)
+
+[node name="top" type="Marker3D" parent="AudienceSpawnPoints/12"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9895, 1.71089, -6.25849e-07)
+
+[node name="middle" type="Marker3D" parent="AudienceSpawnPoints/12"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2108, 1.08069, 8.9407e-08)
+
+[node name="bottom" type="Marker3D" parent="AudienceSpawnPoints/12"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4183, 0.471175, 8.9407e-08)
+
+[node name="13" type="Node3D" parent="AudienceSpawnPoints"]
+transform = Transform3D(0.258819, 0, 0.965926, 0, 1, 0, -0.965926, 0, 0.258819, 0, 0, 0)
+
+[node name="top" type="Marker3D" parent="AudienceSpawnPoints/13"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9895, 1.71089, -6.25849e-07)
+
+[node name="middle" type="Marker3D" parent="AudienceSpawnPoints/13"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2108, 1.08069, 8.9407e-08)
+
+[node name="bottom" type="Marker3D" parent="AudienceSpawnPoints/13"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4183, 0.471175, 8.9407e-08)
+
+[node name="AudienceSpawnPoints2" type="Node3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="0" type="Node3D" parent="AudienceSpawnPoints2"]
+transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, 0, 0, 0)
+
+[node name="top" type="Marker3D" parent="AudienceSpawnPoints2/0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9895, 1.71089, -6.25849e-07)
+
+[node name="middle" type="Marker3D" parent="AudienceSpawnPoints2/0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2108, 1.08069, 8.9407e-08)
+
+[node name="bottom" type="Marker3D" parent="AudienceSpawnPoints2/0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4183, 0.471175, 8.9407e-08)
+
+[node name="1" type="Node3D" parent="AudienceSpawnPoints2"]
+transform = Transform3D(0.939693, 0, 0.34202, 0, 1, 0, -0.34202, 0, 0.939693, 0, 0, 0)
+
+[node name="top" type="Marker3D" parent="AudienceSpawnPoints2/1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9895, 1.71089, -6.25849e-07)
+
+[node name="middle" type="Marker3D" parent="AudienceSpawnPoints2/1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2108, 1.08069, 8.9407e-08)
+
+[node name="bottom" type="Marker3D" parent="AudienceSpawnPoints2/1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4183, 0.471175, 8.9407e-08)
+
+[node name="2" type="Node3D" parent="AudienceSpawnPoints2"]
+transform = Transform3D(0.906308, 0, 0.422618, 0, 1, 0, -0.422618, 0, 0.906308, 0, 0, 0)
+
+[node name="top" type="Marker3D" parent="AudienceSpawnPoints2/2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9895, 1.71089, -6.25849e-07)
+
+[node name="middle" type="Marker3D" parent="AudienceSpawnPoints2/2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2108, 1.08069, 8.9407e-08)
+
+[node name="bottom" type="Marker3D" parent="AudienceSpawnPoints2/2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4183, 0.471175, 8.9407e-08)
+
+[node name="3" type="Node3D" parent="AudienceSpawnPoints2"]
+transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, 0, 0, 0)
+
+[node name="top" type="Marker3D" parent="AudienceSpawnPoints2/3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9895, 1.71089, -6.25849e-07)
+
+[node name="middle" type="Marker3D" parent="AudienceSpawnPoints2/3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2108, 1.08069, 8.9407e-08)
+
+[node name="bottom" type="Marker3D" parent="AudienceSpawnPoints2/3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4183, 0.471175, 8.9407e-08)
+
+[node name="4" type="Node3D" parent="AudienceSpawnPoints2"]
+transform = Transform3D(0.819152, 0, 0.573576, 0, 1, 0, -0.573576, 0, 0.819152, 0, 0, 0)
+
+[node name="top" type="Marker3D" parent="AudienceSpawnPoints2/4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9895, 1.71089, -6.25849e-07)
+
+[node name="middle" type="Marker3D" parent="AudienceSpawnPoints2/4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2108, 1.08069, 8.9407e-08)
+
+[node name="bottom" type="Marker3D" parent="AudienceSpawnPoints2/4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4183, 0.471175, 8.9407e-08)
+
+[node name="5" type="Node3D" parent="AudienceSpawnPoints2"]
+transform = Transform3D(0.766044, 0, 0.642788, 0, 1, 0, -0.642788, 0, 0.766044, 0, 0, 0)
+
+[node name="top" type="Marker3D" parent="AudienceSpawnPoints2/5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9895, 1.71089, -6.25849e-07)
+
+[node name="middle" type="Marker3D" parent="AudienceSpawnPoints2/5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2108, 1.08069, 8.9407e-08)
+
+[node name="bottom" type="Marker3D" parent="AudienceSpawnPoints2/5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4183, 0.471175, 8.9407e-08)
+
+[node name="6" type="Node3D" parent="AudienceSpawnPoints2"]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0, 0, 0)
+
+[node name="top" type="Marker3D" parent="AudienceSpawnPoints2/6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9895, 1.71089, -6.25849e-07)
+
+[node name="middle" type="Marker3D" parent="AudienceSpawnPoints2/6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2108, 1.08069, 8.9407e-08)
+
+[node name="bottom" type="Marker3D" parent="AudienceSpawnPoints2/6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4183, 0.471175, 8.9407e-08)
+
+[node name="7" type="Node3D" parent="AudienceSpawnPoints2"]
+transform = Transform3D(0.642788, 0, 0.766044, 0, 1, 0, -0.766044, 0, 0.642788, 0, 0, 0)
+
+[node name="top" type="Marker3D" parent="AudienceSpawnPoints2/7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9895, 1.71089, -6.25849e-07)
+
+[node name="middle" type="Marker3D" parent="AudienceSpawnPoints2/7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2108, 1.08069, 8.9407e-08)
+
+[node name="bottom" type="Marker3D" parent="AudienceSpawnPoints2/7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4183, 0.471175, 8.9407e-08)
+
+[node name="8" type="Node3D" parent="AudienceSpawnPoints2"]
+transform = Transform3D(0.573576, 0, 0.819152, 0, 1, 0, -0.819152, 0, 0.573576, 0, 0, 0)
+
+[node name="top" type="Marker3D" parent="AudienceSpawnPoints2/8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9895, 1.71089, -6.25849e-07)
+
+[node name="middle" type="Marker3D" parent="AudienceSpawnPoints2/8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2108, 1.08069, 8.9407e-08)
+
+[node name="bottom" type="Marker3D" parent="AudienceSpawnPoints2/8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4183, 0.471175, 8.9407e-08)
+
+[node name="9" type="Node3D" parent="AudienceSpawnPoints2"]
+transform = Transform3D(0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, 0.5, 0, 0, 0)
+
+[node name="top" type="Marker3D" parent="AudienceSpawnPoints2/9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9895, 1.71089, -6.25849e-07)
+
+[node name="middle" type="Marker3D" parent="AudienceSpawnPoints2/9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2108, 1.08069, 8.9407e-08)
+
+[node name="bottom" type="Marker3D" parent="AudienceSpawnPoints2/9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4183, 0.471175, 8.9407e-08)
+
+[node name="10" type="Node3D" parent="AudienceSpawnPoints2"]
+transform = Transform3D(0.422618, 0, 0.906308, 0, 1, 0, -0.906308, 0, 0.422618, 0, 0, 0)
+
+[node name="top" type="Marker3D" parent="AudienceSpawnPoints2/10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9895, 1.71089, -6.25849e-07)
+
+[node name="middle" type="Marker3D" parent="AudienceSpawnPoints2/10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2108, 1.08069, 8.9407e-08)
+
+[node name="bottom" type="Marker3D" parent="AudienceSpawnPoints2/10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4183, 0.471175, 8.9407e-08)
+
+[node name="11" type="Node3D" parent="AudienceSpawnPoints2"]
+transform = Transform3D(0.34202, 0, 0.939693, 0, 1, 0, -0.939693, 0, 0.34202, 0, 0, 0)
+
+[node name="top" type="Marker3D" parent="AudienceSpawnPoints2/11"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9895, 1.71089, -6.25849e-07)
+
+[node name="middle" type="Marker3D" parent="AudienceSpawnPoints2/11"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2108, 1.08069, 8.9407e-08)
+
+[node name="bottom" type="Marker3D" parent="AudienceSpawnPoints2/11"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4183, 0.471175, 8.9407e-08)
+
+[node name="12" type="Node3D" parent="AudienceSpawnPoints2"]
+transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, 0, 0, 0)
+
+[node name="top" type="Marker3D" parent="AudienceSpawnPoints2/12"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9895, 1.71089, -6.25849e-07)
+
+[node name="middle" type="Marker3D" parent="AudienceSpawnPoints2/12"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2108, 1.08069, 8.9407e-08)
+
+[node name="bottom" type="Marker3D" parent="AudienceSpawnPoints2/12"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4183, 0.471175, 8.9407e-08)
+
+[node name="13" type="Node3D" parent="AudienceSpawnPoints2"]
+transform = Transform3D(0.258819, 0, 0.965926, 0, 1, 0, -0.965926, 0, 0.258819, 0, 0, 0)
+
+[node name="top" type="Marker3D" parent="AudienceSpawnPoints2/13"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9895, 1.71089, -6.25849e-07)
+
+[node name="middle" type="Marker3D" parent="AudienceSpawnPoints2/13"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2108, 1.08069, 8.9407e-08)
+
+[node name="bottom" type="Marker3D" parent="AudienceSpawnPoints2/13"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4183, 0.471175, 8.9407e-08)
+
+[node name="AudienceSpawnPoints3" type="Node3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="0" type="Node3D" parent="AudienceSpawnPoints3"]
+transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, 0, 0, 0)
+
+[node name="top" type="Marker3D" parent="AudienceSpawnPoints3/0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9895, 1.71089, -6.25849e-07)
+
+[node name="middle" type="Marker3D" parent="AudienceSpawnPoints3/0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2108, 1.08069, 8.9407e-08)
+
+[node name="bottom" type="Marker3D" parent="AudienceSpawnPoints3/0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4183, 0.471175, 8.9407e-08)
+
+[node name="1" type="Node3D" parent="AudienceSpawnPoints3"]
+transform = Transform3D(0.939693, 0, 0.34202, 0, 1, 0, -0.34202, 0, 0.939693, 0, 0, 0)
+
+[node name="top" type="Marker3D" parent="AudienceSpawnPoints3/1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9895, 1.71089, -6.25849e-07)
+
+[node name="middle" type="Marker3D" parent="AudienceSpawnPoints3/1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2108, 1.08069, 8.9407e-08)
+
+[node name="bottom" type="Marker3D" parent="AudienceSpawnPoints3/1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4183, 0.471175, 8.9407e-08)
+
+[node name="2" type="Node3D" parent="AudienceSpawnPoints3"]
+transform = Transform3D(0.906308, 0, 0.422618, 0, 1, 0, -0.422618, 0, 0.906308, 0, 0, 0)
+
+[node name="top" type="Marker3D" parent="AudienceSpawnPoints3/2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9895, 1.71089, -6.25849e-07)
+
+[node name="middle" type="Marker3D" parent="AudienceSpawnPoints3/2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2108, 1.08069, 8.9407e-08)
+
+[node name="bottom" type="Marker3D" parent="AudienceSpawnPoints3/2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4183, 0.471175, 8.9407e-08)
+
+[node name="3" type="Node3D" parent="AudienceSpawnPoints3"]
+transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, 0, 0, 0)
+
+[node name="top" type="Marker3D" parent="AudienceSpawnPoints3/3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9895, 1.71089, -6.25849e-07)
+
+[node name="middle" type="Marker3D" parent="AudienceSpawnPoints3/3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2108, 1.08069, 8.9407e-08)
+
+[node name="bottom" type="Marker3D" parent="AudienceSpawnPoints3/3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4183, 0.471175, 8.9407e-08)
+
+[node name="4" type="Node3D" parent="AudienceSpawnPoints3"]
+transform = Transform3D(0.819152, 0, 0.573576, 0, 1, 0, -0.573576, 0, 0.819152, 0, 0, 0)
+
+[node name="top" type="Marker3D" parent="AudienceSpawnPoints3/4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9895, 1.71089, -6.25849e-07)
+
+[node name="middle" type="Marker3D" parent="AudienceSpawnPoints3/4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2108, 1.08069, 8.9407e-08)
+
+[node name="bottom" type="Marker3D" parent="AudienceSpawnPoints3/4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4183, 0.471175, 8.9407e-08)
+
+[node name="5" type="Node3D" parent="AudienceSpawnPoints3"]
+transform = Transform3D(0.766044, 0, 0.642788, 0, 1, 0, -0.642788, 0, 0.766044, 0, 0, 0)
+
+[node name="top" type="Marker3D" parent="AudienceSpawnPoints3/5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9895, 1.71089, -6.25849e-07)
+
+[node name="middle" type="Marker3D" parent="AudienceSpawnPoints3/5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2108, 1.08069, 8.9407e-08)
+
+[node name="bottom" type="Marker3D" parent="AudienceSpawnPoints3/5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4183, 0.471175, 8.9407e-08)
+
+[node name="6" type="Node3D" parent="AudienceSpawnPoints3"]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0, 0, 0)
+
+[node name="top" type="Marker3D" parent="AudienceSpawnPoints3/6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9895, 1.71089, -6.25849e-07)
+
+[node name="middle" type="Marker3D" parent="AudienceSpawnPoints3/6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2108, 1.08069, 8.9407e-08)
+
+[node name="bottom" type="Marker3D" parent="AudienceSpawnPoints3/6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4183, 0.471175, 8.9407e-08)
+
+[node name="7" type="Node3D" parent="AudienceSpawnPoints3"]
+transform = Transform3D(0.642788, 0, 0.766044, 0, 1, 0, -0.766044, 0, 0.642788, 0, 0, 0)
+
+[node name="top" type="Marker3D" parent="AudienceSpawnPoints3/7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9895, 1.71089, -6.25849e-07)
+
+[node name="middle" type="Marker3D" parent="AudienceSpawnPoints3/7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2108, 1.08069, 8.9407e-08)
+
+[node name="bottom" type="Marker3D" parent="AudienceSpawnPoints3/7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4183, 0.471175, 8.9407e-08)
+
+[node name="8" type="Node3D" parent="AudienceSpawnPoints3"]
+transform = Transform3D(0.573576, 0, 0.819152, 0, 1, 0, -0.819152, 0, 0.573576, 0, 0, 0)
+
+[node name="top" type="Marker3D" parent="AudienceSpawnPoints3/8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9895, 1.71089, -6.25849e-07)
+
+[node name="middle" type="Marker3D" parent="AudienceSpawnPoints3/8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2108, 1.08069, 8.9407e-08)
+
+[node name="bottom" type="Marker3D" parent="AudienceSpawnPoints3/8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4183, 0.471175, 8.9407e-08)
+
+[node name="9" type="Node3D" parent="AudienceSpawnPoints3"]
+transform = Transform3D(0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, 0.5, 0, 0, 0)
+
+[node name="top" type="Marker3D" parent="AudienceSpawnPoints3/9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9895, 1.71089, -6.25849e-07)
+
+[node name="middle" type="Marker3D" parent="AudienceSpawnPoints3/9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2108, 1.08069, 8.9407e-08)
+
+[node name="bottom" type="Marker3D" parent="AudienceSpawnPoints3/9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4183, 0.471175, 8.9407e-08)
+
+[node name="10" type="Node3D" parent="AudienceSpawnPoints3"]
+transform = Transform3D(0.422618, 0, 0.906308, 0, 1, 0, -0.906308, 0, 0.422618, 0, 0, 0)
+
+[node name="top" type="Marker3D" parent="AudienceSpawnPoints3/10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9895, 1.71089, -6.25849e-07)
+
+[node name="middle" type="Marker3D" parent="AudienceSpawnPoints3/10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2108, 1.08069, 8.9407e-08)
+
+[node name="bottom" type="Marker3D" parent="AudienceSpawnPoints3/10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4183, 0.471175, 8.9407e-08)
+
+[node name="11" type="Node3D" parent="AudienceSpawnPoints3"]
+transform = Transform3D(0.34202, 0, 0.939693, 0, 1, 0, -0.939693, 0, 0.34202, 0, 0, 0)
+
+[node name="top" type="Marker3D" parent="AudienceSpawnPoints3/11"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9895, 1.71089, -6.25849e-07)
+
+[node name="middle" type="Marker3D" parent="AudienceSpawnPoints3/11"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2108, 1.08069, 8.9407e-08)
+
+[node name="bottom" type="Marker3D" parent="AudienceSpawnPoints3/11"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4183, 0.471175, 8.9407e-08)
+
+[node name="12" type="Node3D" parent="AudienceSpawnPoints3"]
+transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, 0, 0, 0)
+
+[node name="top" type="Marker3D" parent="AudienceSpawnPoints3/12"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9895, 1.71089, -6.25849e-07)
+
+[node name="middle" type="Marker3D" parent="AudienceSpawnPoints3/12"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2108, 1.08069, 8.9407e-08)
+
+[node name="bottom" type="Marker3D" parent="AudienceSpawnPoints3/12"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4183, 0.471175, 8.9407e-08)
+
+[node name="13" type="Node3D" parent="AudienceSpawnPoints3"]
+transform = Transform3D(0.258819, 0, 0.965926, 0, 1, 0, -0.965926, 0, 0.258819, 0, 0, 0)
+
+[node name="top" type="Marker3D" parent="AudienceSpawnPoints3/13"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9895, 1.71089, -6.25849e-07)
+
+[node name="middle" type="Marker3D" parent="AudienceSpawnPoints3/13"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2108, 1.08069, 8.9407e-08)
+
+[node name="bottom" type="Marker3D" parent="AudienceSpawnPoints3/13"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4183, 0.471175, 8.9407e-08)
+
+[node name="AudienceSpawnPoints4" type="Node3D" parent="."]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 0, 0, 0)
+
+[node name="0" type="Node3D" parent="AudienceSpawnPoints4"]
+transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, 0, 0, 0)
+
+[node name="top" type="Marker3D" parent="AudienceSpawnPoints4/0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9895, 1.71089, -6.25849e-07)
+
+[node name="middle" type="Marker3D" parent="AudienceSpawnPoints4/0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2108, 1.08069, 8.9407e-08)
+
+[node name="bottom" type="Marker3D" parent="AudienceSpawnPoints4/0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4183, 0.471175, 8.9407e-08)
+
+[node name="1" type="Node3D" parent="AudienceSpawnPoints4"]
+transform = Transform3D(0.939693, 0, 0.34202, 0, 1, 0, -0.34202, 0, 0.939693, 0, 0, 0)
+
+[node name="top" type="Marker3D" parent="AudienceSpawnPoints4/1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9895, 1.71089, -6.25849e-07)
+
+[node name="middle" type="Marker3D" parent="AudienceSpawnPoints4/1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2108, 1.08069, 8.9407e-08)
+
+[node name="bottom" type="Marker3D" parent="AudienceSpawnPoints4/1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4183, 0.471175, 8.9407e-08)
+
+[node name="2" type="Node3D" parent="AudienceSpawnPoints4"]
+transform = Transform3D(0.906308, 0, 0.422618, 0, 1, 0, -0.422618, 0, 0.906308, 0, 0, 0)
+
+[node name="top" type="Marker3D" parent="AudienceSpawnPoints4/2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9895, 1.71089, -6.25849e-07)
+
+[node name="middle" type="Marker3D" parent="AudienceSpawnPoints4/2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2108, 1.08069, 8.9407e-08)
+
+[node name="bottom" type="Marker3D" parent="AudienceSpawnPoints4/2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4183, 0.471175, 8.9407e-08)
+
+[node name="3" type="Node3D" parent="AudienceSpawnPoints4"]
+transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, 0, 0, 0)
+
+[node name="top" type="Marker3D" parent="AudienceSpawnPoints4/3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9895, 1.71089, -6.25849e-07)
+
+[node name="middle" type="Marker3D" parent="AudienceSpawnPoints4/3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2108, 1.08069, 8.9407e-08)
+
+[node name="bottom" type="Marker3D" parent="AudienceSpawnPoints4/3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4183, 0.471175, 8.9407e-08)
+
+[node name="4" type="Node3D" parent="AudienceSpawnPoints4"]
+transform = Transform3D(0.819152, 0, 0.573576, 0, 1, 0, -0.573576, 0, 0.819152, 0, 0, 0)
+
+[node name="top" type="Marker3D" parent="AudienceSpawnPoints4/4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9895, 1.71089, -6.25849e-07)
+
+[node name="middle" type="Marker3D" parent="AudienceSpawnPoints4/4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2108, 1.08069, 8.9407e-08)
+
+[node name="bottom" type="Marker3D" parent="AudienceSpawnPoints4/4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4183, 0.471175, 8.9407e-08)
+
+[node name="5" type="Node3D" parent="AudienceSpawnPoints4"]
+transform = Transform3D(0.766044, 0, 0.642788, 0, 1, 0, -0.642788, 0, 0.766044, 0, 0, 0)
+
+[node name="top" type="Marker3D" parent="AudienceSpawnPoints4/5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9895, 1.71089, -6.25849e-07)
+
+[node name="middle" type="Marker3D" parent="AudienceSpawnPoints4/5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2108, 1.08069, 8.9407e-08)
+
+[node name="bottom" type="Marker3D" parent="AudienceSpawnPoints4/5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4183, 0.471175, 8.9407e-08)
+
+[node name="6" type="Node3D" parent="AudienceSpawnPoints4"]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0, 0, 0)
+
+[node name="top" type="Marker3D" parent="AudienceSpawnPoints4/6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9895, 1.71089, -6.25849e-07)
+
+[node name="middle" type="Marker3D" parent="AudienceSpawnPoints4/6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2108, 1.08069, 8.9407e-08)
+
+[node name="bottom" type="Marker3D" parent="AudienceSpawnPoints4/6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4183, 0.471175, 8.9407e-08)
+
+[node name="7" type="Node3D" parent="AudienceSpawnPoints4"]
+transform = Transform3D(0.642788, 0, 0.766044, 0, 1, 0, -0.766044, 0, 0.642788, 0, 0, 0)
+
+[node name="top" type="Marker3D" parent="AudienceSpawnPoints4/7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9895, 1.71089, -6.25849e-07)
+
+[node name="middle" type="Marker3D" parent="AudienceSpawnPoints4/7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2108, 1.08069, 8.9407e-08)
+
+[node name="bottom" type="Marker3D" parent="AudienceSpawnPoints4/7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4183, 0.471175, 8.9407e-08)
+
+[node name="8" type="Node3D" parent="AudienceSpawnPoints4"]
+transform = Transform3D(0.573576, 0, 0.819152, 0, 1, 0, -0.819152, 0, 0.573576, 0, 0, 0)
+
+[node name="top" type="Marker3D" parent="AudienceSpawnPoints4/8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9895, 1.71089, -6.25849e-07)
+
+[node name="middle" type="Marker3D" parent="AudienceSpawnPoints4/8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2108, 1.08069, 8.9407e-08)
+
+[node name="bottom" type="Marker3D" parent="AudienceSpawnPoints4/8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4183, 0.471175, 8.9407e-08)
+
+[node name="9" type="Node3D" parent="AudienceSpawnPoints4"]
+transform = Transform3D(0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, 0.5, 0, 0, 0)
+
+[node name="top" type="Marker3D" parent="AudienceSpawnPoints4/9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9895, 1.71089, -6.25849e-07)
+
+[node name="middle" type="Marker3D" parent="AudienceSpawnPoints4/9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2108, 1.08069, 8.9407e-08)
+
+[node name="bottom" type="Marker3D" parent="AudienceSpawnPoints4/9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4183, 0.471175, 8.9407e-08)
+
+[node name="10" type="Node3D" parent="AudienceSpawnPoints4"]
+transform = Transform3D(0.422618, 0, 0.906308, 0, 1, 0, -0.906308, 0, 0.422618, 0, 0, 0)
+
+[node name="top" type="Marker3D" parent="AudienceSpawnPoints4/10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9895, 1.71089, -6.25849e-07)
+
+[node name="middle" type="Marker3D" parent="AudienceSpawnPoints4/10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2108, 1.08069, 8.9407e-08)
+
+[node name="bottom" type="Marker3D" parent="AudienceSpawnPoints4/10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4183, 0.471175, 8.9407e-08)
+
+[node name="11" type="Node3D" parent="AudienceSpawnPoints4"]
+transform = Transform3D(0.34202, 0, 0.939693, 0, 1, 0, -0.939693, 0, 0.34202, 0, 0, 0)
+
+[node name="top" type="Marker3D" parent="AudienceSpawnPoints4/11"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9895, 1.71089, -6.25849e-07)
+
+[node name="middle" type="Marker3D" parent="AudienceSpawnPoints4/11"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2108, 1.08069, 8.9407e-08)
+
+[node name="bottom" type="Marker3D" parent="AudienceSpawnPoints4/11"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4183, 0.471175, 8.9407e-08)
+
+[node name="12" type="Node3D" parent="AudienceSpawnPoints4"]
+transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, 0, 0, 0)
+
+[node name="top" type="Marker3D" parent="AudienceSpawnPoints4/12"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9895, 1.71089, -6.25849e-07)
+
+[node name="middle" type="Marker3D" parent="AudienceSpawnPoints4/12"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2108, 1.08069, 8.9407e-08)
+
+[node name="bottom" type="Marker3D" parent="AudienceSpawnPoints4/12"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4183, 0.471175, 8.9407e-08)
+
+[node name="13" type="Node3D" parent="AudienceSpawnPoints4"]
+transform = Transform3D(0.258819, 0, 0.965926, 0, 1, 0, -0.965926, 0, 0.258819, 0, 0, 0)
+
+[node name="top" type="Marker3D" parent="AudienceSpawnPoints4/13"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9895, 1.71089, -6.25849e-07)
+
+[node name="middle" type="Marker3D" parent="AudienceSpawnPoints4/13"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2108, 1.08069, 8.9407e-08)
+
+[node name="bottom" type="Marker3D" parent="AudienceSpawnPoints4/13"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4183, 0.471175, 8.9407e-08)

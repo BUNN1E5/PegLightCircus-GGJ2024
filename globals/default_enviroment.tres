@@ -1,9 +1,9 @@
 [gd_resource type="Environment" format=3 uid="uid://dk5cqk6373bwl"]
 
 [resource]
-background_energy_multiplier = 12.11
+ambient_light_source = 2
 ambient_light_color = Color(1, 1, 1, 1)
-ambient_light_energy = 5.47
+ambient_light_energy = 10.0
 ssao_enabled = true
 volumetric_fog_enabled = true
 volumetric_fog_temporal_reprojection_amount = 0.99

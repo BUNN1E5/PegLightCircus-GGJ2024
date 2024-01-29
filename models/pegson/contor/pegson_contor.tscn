@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://du6xs6fqxnpyk"]
+
+[ext_resource type="PackedScene" uid="uid://dkpplreft2l0c" path="res://models/pegson/contor/pegson_contor.blend" id="1_1kft4"]
+[ext_resource type="Script" path="res://scripts/pegson_entity.gd" id="2_sh7rm"]
+[ext_resource type="AnimationLibrary" uid="uid://dxolx6qdehvcp" path="res://models/pegson/pegson_animations.res" id="3_sqaum"]
+
+[node name="pegson_contor" instance=ExtResource("1_1kft4")]
+
+[node name="body" parent="." index="0"]
+transform = Transform3D(0.995654, 0.0296624, 0.0882841, -0.0295432, 0.99956, -0.00265683, -0.088324, 3.70967e-05, 0.996092, 0, 0, 0)
+
+[node name="PegsonEntity" type="Node" parent="." index="1"]
+script = ExtResource("2_sh7rm")
+anim_node_path = NodePath("../AnimationPlayer")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="2"]
+libraries = {
+"pegson_animations": ExtResource("3_sqaum")
+}

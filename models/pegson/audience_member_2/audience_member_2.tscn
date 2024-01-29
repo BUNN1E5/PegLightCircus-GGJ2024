@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dlrsnnpwtfug1"]
+
+[ext_resource type="PackedScene" uid="uid://brgr6dmhgiluu" path="res://models/pegson/audience_member_2/audience_member_2.blend" id="1_0paec"]
+[ext_resource type="Script" path="res://scripts/pegson_entity.gd" id="2_spxf8"]
+[ext_resource type="AnimationLibrary" uid="uid://dxolx6qdehvcp" path="res://models/pegson/pegson_animations.res" id="3_a6uu5"]
+
+[node name="audience_member_2" instance=ExtResource("1_0paec")]
+
+[node name="body" parent="." index="0"]
+transform = Transform3D(0.168276, 0.00501328, 0.014921, -0.00499311, 0.168937, -0.000449036, -0.0149277, 6.26976e-06, 0.168351, 0, 0, 0)
+
+[node name="PegsonEntity" type="Node" parent="." index="1"]
+script = ExtResource("2_spxf8")
+anim_node_path = NodePath("../AnimationPlayer")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="2"]
+libraries = {
+"pegson_animations": ExtResource("3_a6uu5")
+}

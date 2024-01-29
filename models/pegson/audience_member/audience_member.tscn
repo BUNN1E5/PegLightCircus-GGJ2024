@@ -1,10 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://4l30ijkcswfi"]
+[gd_scene load_steps=6 format=3 uid="uid://4l30ijkcswfi"]
 
 [ext_resource type="PackedScene" uid="uid://b071mrnxrsjgj" path="res://models/pegson/audience_member/audience_member.blend" id="1_cr6io"]
 [ext_resource type="Texture2D" uid="uid://soywwhvcvgnq" path="res://models/pegson/audience_member/audience_member_texture.png" id="2_gjqhf"]
 [ext_resource type="Script" path="res://scripts/pegson_entity.gd" id="2_iyn8h"]
-[ext_resource type="AnimationLibrary" uid="uid://02tta3w4mg3m" path="res://models/pegson/pegson_base_animations.res" id="3_bfs37"]
-[ext_resource type="Script" path="res://scripts/audience_member.gd" id="4_c5ru5"]
+[ext_resource type="AnimationLibrary" uid="uid://dxolx6qdehvcp" path="res://models/pegson/pegson_animations.res" id="3_61w2o"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u122h"]
 albedo_texture = ExtResource("2_gjqhf")
@@ -12,21 +11,16 @@ albedo_texture = ExtResource("2_gjqhf")
 [node name="audience_member" instance=ExtResource("1_cr6io")]
 
 [node name="body" parent="." index="0"]
-transform = Transform3D(0.104201, 0.00310434, 0.00923952, -0.00309187, 0.10461, -0.000278055, -0.00924365, 3.88233e-06, 0.104248, 0, 0.123468, 0)
+transform = Transform3D(0.104201, 0.00310435, 0.00923955, -0.00309187, 0.10461, -0.000278056, -0.00924363, 3.88239e-06, 0.104248, 0, 0, 0)
 material_override = SubResource("StandardMaterial3D_u122h")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="1"]
 libraries = {
-"pegson_base_animations": ExtResource("3_bfs37")
+"pegson_animations": ExtResource("3_61w2o")
 }
 autoplay = "pegson_base_animations/Idle"
 
-[node name="AudienceMember" type="Node" parent="." index="2"]
-script = ExtResource("4_c5ru5")
-root_node_path = NodePath("..")
-pegson_entity_path = NodePath("../PegsonEntity")
-
-[node name="PegsonEntity" type="Node" parent="." index="3" node_paths=PackedStringArray("anim_node")]
+[node name="PegsonEntity" type="Node" parent="." index="2"]
 script = ExtResource("2_iyn8h")
-anim_node = NodePath("../AnimationPlayer")
-active_nodes_path = Array[NodePath]([NodePath("../AudienceMember")])
+anim_node_path = NodePath("../AnimationPlayer")
+active_nodes_path = Array[NodePath]([NodePath("")])

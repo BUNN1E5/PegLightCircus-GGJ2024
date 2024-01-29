@@ -1,13 +1,17 @@
-extends Node
-class_name AudienceMember
+@tool
+extends Node3D
 
-@onready var root_node : Node3D = get_node("..")
+@export var angle : float
+@export var pfb_path : NodePath
+@onready var pfb : Node3D = get_node(pfb_path)
 
-var pegson_entity : PegsonEntity
+@export
+func _generate():
+	
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pegson_entity = get_node("../PegsonEntity")
-	AudienceManager.add_member(self)
+	
 	pass # Replace with function body.
 
 

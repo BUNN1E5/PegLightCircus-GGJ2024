@@ -3,7 +3,9 @@ class_name PegsonEntity
 @export var in_stretcher = false
 @export var dont_variable_speed = false
 @onready var rng = RandomNumberGenerator.new()
-@export var anim_node : AnimationPlayer
+
+@export var anim_node_path : NodePath
+@onready var anim_node : AnimationPlayer = get_node(anim_node_path)
 
 @export var left_light_target : Marker3D
 @export var right_light_target : Marker3D

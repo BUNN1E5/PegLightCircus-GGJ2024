@@ -41,6 +41,8 @@ func remove_target(target : Marker3D):
 
 func _look_at_nearest_target():
 	for audience_member in audience_members:
+		if audience_member == null:
+			continue
 		if audience_member.pegson_entity.in_stretcher:
 			continue
 		var closest_target : Marker3D = Marker3D.new()

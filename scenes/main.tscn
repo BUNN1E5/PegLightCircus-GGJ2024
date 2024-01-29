@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://q3nlgpva1vnx"]
+[gd_scene load_steps=8 format=3 uid="uid://q3nlgpva1vnx"]
 
 [ext_resource type="PackedScene" uid="uid://dlopfs386db8w" path="res://models/environment/circus_enviornment.tscn" id="2_cxbc8"]
 [ext_resource type="PackedScene" uid="uid://c6it73womfku8" path="res://entities/spot_light.tscn" id="2_p30wt"]
 [ext_resource type="PackedScene" uid="uid://dj4bve2y02nhc" path="res://globals/world_environment.tscn" id="2_u2gwl"]
+[ext_resource type="PackedScene" uid="uid://b07402km0sb7a" path="res://workspaces/bunbun/audience_spawn.tscn" id="3_6b1rg"]
 [ext_resource type="PackedScene" uid="uid://dq84h37cj0avl" path="res://ui/main_menu.tscn" id="4_cp2ug"]
 [ext_resource type="PackedScene" uid="uid://cqqqf8abfey2s" path="res://ui/controls.tscn" id="5_83ugw"]
 [ext_resource type="PackedScene" uid="uid://4w78e5stdug4" path="res://ui/ending.tscn" id="6_1tn7v"]
@@ -24,6 +25,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.9322, 15.3239, -2.41729)
 camera_node_path = NodePath("../circus_Enviorment/Camera_playerview")
 use_mouse = false
 
+[node name="AudienceSpawn" parent="." instance=ExtResource("3_6b1rg")]
+
 [node name="WorldEnvironment" parent="." instance=ExtResource("2_u2gwl")]
 
 [node name="Menu" type="Control" parent="."]
@@ -33,13 +36,14 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="MainMenu" parent="Menu" instance=ExtResource("4_cp2ug")]
-visible = false
 layout_mode = 1
 offset_left = 377.0
 offset_top = 208.0
 offset_right = 377.0
 offset_bottom = 208.0
+light_change_time = 0.5
 controls_node_path = NodePath("../Controls")
+enviroment_node_path = NodePath("../../WorldEnvironment")
 
 [node name="Ending" parent="Menu" instance=ExtResource("6_1tn7v")]
 visible = false
