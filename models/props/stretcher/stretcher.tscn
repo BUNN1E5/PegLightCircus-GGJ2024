@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bayc21ad2mnqu" path="res://models/props/stretcher/stretcher_isolated_texture.png" id="2_14r6f"]
 [ext_resource type="Script" path="res://scripts/stretcher.gd" id="2_dv3ft"]
 [ext_resource type="PackedScene" uid="uid://xhdovmhderpl" path="res://models/pegson/pegson_base.tscn" id="3_yvrpr"]
-[ext_resource type="AnimationLibrary" uid="uid://02tta3w4mg3m" path="res://models/pegson/pegson_base_animations.res" id="4_d4jyp"]
+[ext_resource type="AnimationLibrary" uid="uid://dxolx6qdehvcp" path="res://models/pegson/pegson_animations.res" id="4_d4jyp"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ntrou"]
 cull_mode = 2

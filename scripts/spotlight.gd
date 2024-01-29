@@ -3,7 +3,7 @@ extends SpotLight3D
 @export var camera_node_path : NodePath
 @onready var camera_node : Camera3D = get_node(camera_node_path)
 
-@onready var marker = Marker3D.new()
+@onready var marker = $Marker3D
 
 @onready var light_collider : Area3D = $Area3D
 
@@ -42,7 +42,7 @@ func _set_light(enabled : bool):
 		AudienceManager.add_target(marker)
 	else:
 		AudienceManager.remove_target(marker)
-	self.visisble = enabled
+	self.visible = enabled
 	spotlight_on = enabled
 	light_collider.set_process(enabled)
 	self.set_process(enabled)

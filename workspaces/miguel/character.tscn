@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://workspaces/miguel/pathfinding.gd" id="1_rilcv"]
 [ext_resource type="PackedScene" uid="uid://cd3nc5gd6wn4a" path="res://models/pegson/clown/pegson_clown.tscn" id="2_tey77"]
-[ext_resource type="PackedScene" uid="uid://ydamp8wuveah" path="res://workspaces/miguel/balanceball.tscn" id="4_wo1p2"]
+[ext_resource type="PackedScene" uid="uid://p5j13aq80f7g" path="res://workspaces/miguel/balanceball.tscn" id="4_wo1p2"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_uslw2"]
 radius = 0.25

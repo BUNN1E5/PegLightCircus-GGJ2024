@@ -49,11 +49,13 @@ light_specular = 32.0
 camera_node_path = NodePath("../circus_Enviorment/Camera_playerview")
 input_name_prefix = "left_light"
 use_mouse = false
+speed = 0.09
 
 [node name="SpotLight" parent="." instance=ExtResource("2_p30wt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.9322, 15.3239, -2.41729)
 camera_node_path = NodePath("../circus_Enviorment/Camera_playerview")
 use_mouse = false
+speed = 0.09
 
 [node name="AudienceSpawn" parent="." instance=ExtResource("3_6b1rg")]
 

@@ -1,16 +1,17 @@
-[gd_scene load_steps=12 format=3 uid="uid://bvqnh5gflywp6"]
+[gd_scene load_steps=13 format=3 uid="uid://bvqnh5gflywp6"]
 
 [ext_resource type="PackedScene" uid="uid://dvnhtjq5k2gpt" path="res://models/pegson/ringmaster/pegson_ringmaster.tscn" id="1_rh86o"]
 [ext_resource type="PackedScene" uid="uid://4l30ijkcswfi" path="res://models/pegson/audience_member/audience_member.tscn" id="3_58yw8"]
 [ext_resource type="PackedScene" uid="uid://cd3nc5gd6wn4a" path="res://models/pegson/clown/pegson_clown.tscn" id="3_qtvbh"]
+[ext_resource type="Script" path="res://scripts/audience_member.gd" id="4_as24i"]
 [ext_resource type="PackedScene" uid="uid://bl6owwpn2ufdt" path="res://models/props/juggling_balls/juggling_balls.tscn" id="4_tw7de"]
-[ext_resource type="PackedScene" uid="uid://fsst3b4tlx" path="res://models/props/stretcher/stretcher.tscn" id="5_ey242"]
+[ext_resource type="PackedScene" uid="uid://drkns2vn7y3l7" path="res://models/props/stretcher/stretcher_isolated.blend" id="5_ey242"]
 [ext_resource type="PackedScene" uid="uid://di1sxfwhwo7rn" path="res://models/props/unicycle/unicycle.tscn" id="6_q78kb"]
 [ext_resource type="PackedScene" uid="uid://dlopfs386db8w" path="res://models/environment/circus_enviornment.tscn" id="7_ehjb0"]
 [ext_resource type="PackedScene" uid="uid://dj4bve2y02nhc" path="res://globals/world_environment.tscn" id="8_omnu2"]
 [ext_resource type="CameraAttributesPractical" uid="uid://cto80wijwri8t" path="res://globals/camera_attributes_anim_test.tres" id="9_csk70"]
 [ext_resource type="PackedScene" uid="uid://c6it73womfku8" path="res://entities/spot_light.tscn" id="10_6oykc"]
-[ext_resource type="Script" path="res://scripts/audience_manager.gd" id="11_ssjsk"]
+[ext_resource type="PackedScene" uid="uid://dlrsnnpwtfug1" path="res://models/pegson/audience_member_2/audience_member_2.tscn" id="12_yus26"]
 
 [node name="AnimationTest" type="Node3D"]
 
@@ -32,6 +33,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.983098, 0.0740608, -0.0730
 [node name="body" parent="Audience_Member" index="0"]
 transform = Transform3D(0.104201, 0.00310436, 0.00923951, -0.00309187, 0.10461, -0.000278055, -0.00924364, 3.88236e-06, 0.104248, 0, 0.123468, 0)
 
+[node name="Node" type="Node" parent="Audience_Member"]
+script = ExtResource("4_as24i")
+
 [node name="juggling_balls" parent="." instance=ExtResource("4_tw7de")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.03413, -0.0986178, 0.0276599)
 
@@ -47,7 +51,7 @@ transform = Transform3D(1, 0, 2.00234e-08, 1.06404e-07, -5.21541e-08, 1, -2.2351
 [node name="body" parent="stretcher/body/Audience_Member2" index="0"]
 transform = Transform3D(0.104518, 0.00269657, 0.00464563, -0.00266771, 0.10462, -0.000708361, -0.00466226, 0.000589007, 0.104551, 0, 0.123468, 0)
 
-[node name="PegsonEntity" parent="stretcher/body/Audience_Member2" index="3"]
+[node name="PegsonEntity" parent="stretcher/body/Audience_Member2" index="2"]
 in_stretcher = true
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
@@ -76,13 +80,15 @@ input_name_prefix = "left_light"
 transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, -8.4579, 11.7986, -12.8033)
 camera_node_path = NodePath("../Camera3D")
 
-[node name="audience_manager" type="Node" parent="."]
-script = ExtResource("11_ssjsk")
+[node name="audience_member_2" parent="." instance=ExtResource("12_yus26")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.74793, 0.00288575, -0.277011)
+
+[node name="Node" type="Node" parent="audience_member_2"]
+script = ExtResource("4_as24i")
 
 [editable path="pegson_clown"]
 [editable path="pegson_ringmaster"]
 [editable path="Audience_Member"]
 [editable path="stretcher"]
 [editable path="stretcher/body/Audience_Member2"]
-[editable path="stretcher/pegson_base2"]
-[editable path="stretcher/pegson_base"]
+[editable path="audience_member_2"]

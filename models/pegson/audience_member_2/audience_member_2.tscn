@@ -7,7 +7,7 @@
 [node name="audience_member_2" instance=ExtResource("1_0paec")]
 
 [node name="body" parent="." index="0"]
-transform = Transform3D(0.168276, 0.00501328, 0.014921, -0.00499311, 0.168937, -0.000449036, -0.0149277, 6.26976e-06, 0.168351, 0, 0, 0)
+transform = Transform3D(0.169011, 0, 0, 0, 0.169011, 0, 0, 0, 0.169012, 0, 0, 0)
 
 [node name="PegsonEntity" type="Node" parent="." index="1"]
 script = ExtResource("2_spxf8")

@@ -6,7 +6,6 @@ extends Node
 @export_range(0, 1) var enjoyment : float  = 0.5
 @export_range(0, 1) var fear : float = 0
 
-
 func add_member(member : AudienceMember):
 	var index = audience_members.find(member) #This is terrible
 	if index != -1:
@@ -48,8 +47,7 @@ func _look_at_nearest_target():
 		var closest_target : Marker3D = Marker3D.new()
 		var closed_dist : float = INF
 		for target in targets:
-			
-			var dist = audience_member.root_node.position.distance_squared_to(target.position)
+			var dist = audience_member.root_node.global_position.distance_squared_to(target.position)
 			if(dist < closed_dist):
 				closed_dist = dist
 				closest_target = target

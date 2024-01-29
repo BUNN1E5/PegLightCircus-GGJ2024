@@ -7,18 +7,16 @@ class_name PegsonEntity
 @export var anim_node_path : NodePath
 @onready var anim_node : AnimationPlayer = get_node(anim_node_path)
 
-@export var left_light_target : Marker3D
-@export var right_light_target : Marker3D
-
 @export var active_nodes_path : Array[NodePath]
 @onready var active_nodes : Array[Node] = _load_nodes(active_nodes_path)
 
 func _load_nodes(node_paths : Array[NodePath]) -> Array[Node]:
 	var nodes :Array[Node] = []
-	for node_path in node_paths:
-		var node : Node = get_node(node_path)
-		if node != null:
-			nodes.append(node)
+	if(len(active_nodes_path) != 0):
+		for node_path in node_paths:
+			var node : Node = get_node(node_path)
+			if node != null:
+				nodes.append(node)
 	return nodes
 
 func _set_active_nodes(state : bool) -> void:

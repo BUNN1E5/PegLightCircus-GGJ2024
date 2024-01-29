@@ -34,10 +34,9 @@ func _ready():
 		var member = possible_audience[rng.randi_range(0, len(possible_audience)-1)].instantiate()
 		audience_spawn_points[possible[hit]].add_child(member)
 		member.position = Vector3.ZERO
-		#TODO :: Add audience_member
-		var audience_script = AudienceMember.new()
-		member.add_child(audience_script)
+		member.add_child(AudienceMember.new())
 		possible.remove_at(hit)
+		
 	pass # Replace with function body.
 
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://ydamp8wuveah"]
+[gd_scene load_steps=4 format=3 uid="uid://p5j13aq80f7g"]
 
 [ext_resource type="PackedScene" uid="uid://ceejsq2obtxmc" path="res://models/props/balance_ball/balanceball.blend" id="1_j0jdg"]
 [ext_resource type="Texture2D" uid="uid://o2ugi61olo6q" path="res://models/props/balance_ball/ballcol.png" id="2_f5p2r"]
