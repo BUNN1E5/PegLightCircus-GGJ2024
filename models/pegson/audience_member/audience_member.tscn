@@ -18,7 +18,7 @@ material_override = SubResource("StandardMaterial3D_u122h")
 libraries = {
 "pegson_animations": ExtResource("3_61w2o")
 }
-autoplay = "pegson_base_animations/Idle"
+autoplay = "pegson_animations/Idle"
 
 [node name="PegsonEntity" type="Node" parent="." index="2"]
 script = ExtResource("2_iyn8h")

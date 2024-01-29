@@ -13,6 +13,7 @@ transform = Transform3D(0.104201, 0.00310435, 0.00923946, -0.00309187, 0.10461, 
 libraries = {
 "pegson_animations": ExtResource("2_cqy7f")
 }
+autoplay = "pegson_animations/Idle"
 
 [node name="PegsonEntity" type="Node" parent="." index="2"]
 script = ExtResource("3_ydfps")

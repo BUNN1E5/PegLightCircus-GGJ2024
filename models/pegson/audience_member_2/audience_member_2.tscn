@@ -17,3 +17,4 @@ anim_node_path = NodePath("../AnimationPlayer")
 libraries = {
 "pegson_animations": ExtResource("3_a6uu5")
 }
+autoplay = "pegson_animations/Idle"
