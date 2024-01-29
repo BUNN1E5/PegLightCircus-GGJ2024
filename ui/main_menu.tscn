@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://ui/main_menu.gd" id="1_hdxst"]
 [ext_resource type="FontFile" uid="uid://bl28gg1u5smqo" path="res://ui/fonts/SpanishCircus.otf" id="2_8kcvf"]
-[ext_resource type="FontFile" uid="uid://r1hv0i14nwv7" path="res://ui/fonts/SpanishCircus.ttf" id="3_yb402"]
+[ext_resource type="FontFile" uid="uid://c0ney16b7ni64" path="res://ui/fonts/SpanishCircus.ttf" id="3_yb402"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pvat4"]
 

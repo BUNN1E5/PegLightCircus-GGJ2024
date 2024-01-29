@@ -88,6 +88,7 @@ metadata/CharacterNum = 1
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(-1, 2.99004e-08, -8.21505e-08, -1.0692e-08, 0.890808, 0.454379, 8.67665e-08, 0.454379, -0.890808, 0.0114865, 6.32708, -11.2234)
 environment = SubResource("Environment_os1jt")
+current = true
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.78116, 0)
